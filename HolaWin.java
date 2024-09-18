@@ -6,8 +6,8 @@ import javax.swing.*;
 public class HolaWin{
     public static void main(String[] args){
     JOptionPane.showMessageDialog(null,
-        "Welcome to the Java World",
-        "Graphic Mode",
+        "Bienvenido a mundo Java",
+        "Modo Grafico",
         JOptionPane.INFORMATION_MESSAGE);
     }
 }
