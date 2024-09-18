@@ -12,7 +12,7 @@ public class Operacion2 {
         numero1 = sc.nextByte();
         System.out.println("Escriba el segundo numero: ");
         numero2 =  sc.nextByte();
-        byte suma = numero1 + numero2;
+        byte suma = (byte)(numero1 + numero2);
         System.out.println("la suma es: " + suma);
     }
 }
