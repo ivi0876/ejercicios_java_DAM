@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 @SuppressWarnings({ "resource" })
 public class Basico {
@@ -17,8 +18,8 @@ public class Basico {
         //System.out.println("Nombre: " + nombre);
         //System.out.println("Direccion: " + direccion);
         //System.out.println("Edad: " + edad);
-        System.out.print("Te llamas" + nombre);
+        System.out.print("Te llamas " + nombre);
         System.out.println(" y vives en " + direccion);
-        System.out.println(" y tienes" + edad);
+        System.out.println(" y tienes " + edad);
     }
 }
