@@ -1,4 +1,5 @@
 import java.util.Scanner;
+@SuppressWarnings({ "resource" })
 public class Hola2 {
     //static Scanner sc = new Scanner(System.in);
     public static void main(String args[]) {
