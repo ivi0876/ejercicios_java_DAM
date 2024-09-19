@@ -1,0 +1,4 @@
+Haz un bucle do-while que pida números enteros al usuario hasta que este meta
+uno positivo. Una vez que te funcione, añade dentro del bucle un if que saque un
+mensaje de error si el número es negativo. Ya fuera del bucle muestra el número
+con printf ocupando 5 espacios.
