@@ -1,6 +1,8 @@
 Mediante contador y acumulador suma los números del 1 al 20. Hazlo con los 3
-bucles. En el primer bucle que hagas debe mostrarse dentro del bucle la evolución
-del acumulador y del contador. En los otros dos solo el resultado final (que debe
-ser el mismo en los 3 casos, claro). Recuerda que la estructura de contador será
+bucles. 
+En el primer bucle que hagas debe mostrarse dentro del bucle la evolución
+del acumulador y del contador. 
+En los otros dos solo el resultado final (que debe ser el mismo en los 3 casos, claro). 
+Recuerda que la estructura de contador será
 c=c+1 para ir de 1 en 1 y la del acumulador acu=acu+c para sumar cada uno de
-los valores de c.
+los valores de c
