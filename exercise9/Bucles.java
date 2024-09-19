@@ -7,6 +7,7 @@ public class Bucles {
         for (int contador = 1; contador <= 10; contador++) {
             System.out.print(contador + " ");
         }
+        //? PREGUNTAR AL PROFE SI HAY OTRA FORMA
         System.out.println(); // Salto de línea para separar resultados
 
         // Muestra números del 10 al 1 de forma descendente.
