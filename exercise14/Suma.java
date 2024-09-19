@@ -7,7 +7,7 @@ public class Suma {
         int numero;
         int acu = 0;
         while(true) {
-            System.out.println("Introduce un numero: ");
+            System.out.print("Introduce un numero: ");
             numero = sc.nextInt();
 
             if(numero < 0) {
@@ -19,3 +19,4 @@ public class Suma {
 
     }
 }
+// * ENTIENDO QUE INGRESAS NUMEROS HASTA QUE EL USUARIO PONGA UNO NEGATIVO
