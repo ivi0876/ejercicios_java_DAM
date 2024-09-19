@@ -5,41 +5,32 @@ import java.util.Scanner;
 public class Dias {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String cadenaMes;
-        int numeroMes;
+        String diaSemana;
+        int numeroDia;
 
     
-    
-    numeroMes=sc.nextInt();
-    switch (numeroMes) {
-        case 1: cadenaMes = "Enero";
+    System.out.print("Dime un numero del 1 - 7: ");
+    numeroDia=sc.nextInt();
+    switch (numeroDia) {
+        case 1: diaSemana = "Lunes";
         break;
-        case 2: cadenaMes = "Febrero";
+        case 2: diaSemana = " Martes";
         break;
-        case 3: cadenaMes = "Marzo";
+        case 3: diaSemana = "Miercoles";
         break;
-        case 4: cadenaMes = "Abril";
+        case 4: diaSemana = "Jueves";
         break;
-        case 5: cadenaMes = "Mayo";
+        case 5: diaSemana = "Viernes";
         break;
-        case 6: cadenaMes = "Junio";
+        case 6: diaSemana = "Sabado";
         break;
-        case 7: cadenaMes = "Julio";
+        case 7: diaSemana = "Domingo";
         break;
-        case 8: cadenaMes = "Agosto";
-        break;
-        case 9: cadenaMes = "Septiembre";
-        break;
-        case 10:cadenaMes = "Octubre";
-        break;
-        case 11:cadenaMes = "Noviembre";
-        break;
-        case 12:cadenaMes = "Diciembre";
-        break;
-        default:cadenaMes = "Mes inválido";
+        
+        default:diaSemana = "Dia inválido";
         break;
         
     }
-    System.out.println("Estamos en: " + cadenaMes);
+    System.out.println("Estamos en: " + diaSemana);
     }
 }
