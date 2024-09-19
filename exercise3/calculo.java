@@ -14,5 +14,9 @@ public class calculo {
         numero2 =  sc.nextByte();
         byte suma = (byte)(numero1 + numero2);
         System.out.println("la suma es: " + suma);
+        byte division = (byte)(numero1 / numero2);
+        byte modulo = (byte)(numero1 % numero2);
+        System.out.println("Resultado del cociente de la division: " + division);
+        System.out.println("Resultado del modulo: " + modulo);
     }
 }
