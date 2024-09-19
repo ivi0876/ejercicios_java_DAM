@@ -1,0 +1,4 @@
+Haz un bucle do-while que pida números double al usuario pero si dicho número
+no está entre 1 y 10 lo vuelve a pedir y además informa del error (como el if del
+ejercicio previo). La condición es similar al último apartado del ejercicio 6. Ya
+fuera del bucle muestra el número con printf con 3 decimales.
