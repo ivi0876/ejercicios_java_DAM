@@ -46,7 +46,7 @@ public class Bucles {
         for (int contador6 = 10; contador6 <= 50; contador6 += 5) {
             System.out.print(contador6 + " ");
         }
-        //System.out.println(); // Salto de línea para separar resultados
+        System.out.println(); // Salto de línea para separar resultados
 
         // Muestra del 100 al 0 de forma decreciente pero con contador de 10 en 10.
         System.out.println("Números del 100 al 0 de forma decreciente:");
