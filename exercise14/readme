@@ -1,0 +1,5 @@
+Haz un bucle que pida números al usuario mientras estos sean positivos y cada
+uno que meta lo va sumando en un acumulador. Ojo porque ahora no acumulas el
+contador (es más, no hay contador) si no el número que mete el usuario. Acaba
+cuando el usuario mete uno negativo. Ya fuera del bucle muestra el resultado del
+acumulador (suma de los números del usuario).
