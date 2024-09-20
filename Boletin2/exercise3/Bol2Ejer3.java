@@ -12,7 +12,6 @@ public class Bol2Ejer3 {
             for (int contador = 1; contador <= numero; contador++) {
                 acu += contador;  // Acumulamos la suma de los números
             }
-
             System.out.println("La suma de los números del 1 al " + numero + " es: " + acu);
 
         } else {
