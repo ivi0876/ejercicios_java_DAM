@@ -1,0 +1,6 @@
+a) Realiza un programa que muestre los números del 1 al 20. Debes hacerlo con
+los 3 bucles (while, do-while y for) y un contador en cada bucle.
+b) A continuación en el mismo programa y con el bucle que prefieras, haz que
+muestre los números pares entre 1 y 50. Estos deben quedar bien formateados
+en una columna de tamaño 5 caracteres justificados a la derecha mediante
+printf.
