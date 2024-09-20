@@ -1,0 +1,5 @@
+Haz un programa que pida un nº al usuario.
+Si es positivo realiza mediante un bucle, un contador y un acumulador la suma
+de números desde el 1 hasta el que metió el usuario. Finalmente muestra dicha
+suma final.
+Si el número es negativo o 0 no hace nada.
