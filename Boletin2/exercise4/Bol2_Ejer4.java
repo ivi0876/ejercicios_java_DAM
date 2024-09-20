@@ -10,7 +10,7 @@ public class Bol2_Ejer4 {
         //double numero2 = sc.nextDouble();
         System.out.printf("El numero entero en decimal es: %d", numero1);
         System.out.println();
-        System.out.printf("El numero entero en octal es: %o", numero1);
+        System.out.printf("El numero entero en octal es: " +"\t\t\t%o", numero1);
         System.out.println();
 
     }
