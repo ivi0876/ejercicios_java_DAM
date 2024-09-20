@@ -1,0 +1,5 @@
+Haz un programa que pida un nº entero al usuario y luego un número real.
+El entero debe mostrarlo primero en decimal; luego en octal ocupando 5
+caracteres y rellenando los vacíos a la izquierda con ceros (busca como
+hacerlo); y en hexadecimal poniendo los dígitos “letra” en mayúscula.
+El real lo mostrará con 3 decimales y ocupando al menos 7 caracteres.
