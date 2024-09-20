@@ -1,4 +1,4 @@
-package exercise11;
+package Boletin1.exercise11;
 
 public class Bucles3 {
     public static void main(String[] args) {

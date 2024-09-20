@@ -1,4 +1,4 @@
-package exercise8;
+package Boletin1.exercise8;
 
 import java.util.Scanner;
 @SuppressWarnings({ "resource" })

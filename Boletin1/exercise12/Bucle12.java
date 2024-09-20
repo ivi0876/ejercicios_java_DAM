@@ -1,4 +1,4 @@
-package exercise12;
+package Boletin1.exercise12;
 import java.util.Scanner;
 @SuppressWarnings({ "resource" })
 public class Bucle12 {

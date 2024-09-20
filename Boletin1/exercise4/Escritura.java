@@ -1,5 +1,5 @@
 // Se dice aqui ya el nombre
-package exercise4;
+package Boletin1.exercise4;
 
 public class Escritura {
     public static void main(String[] args) {

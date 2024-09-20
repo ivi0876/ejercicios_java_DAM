@@ -1,4 +1,4 @@
-package exercise14;
+package Boletin1.exercise14;
 import java.util.Scanner;
 @SuppressWarnings({ "resource" })
 public class Suma {

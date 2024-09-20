@@ -1,4 +1,4 @@
-package exercise10;
+package Boletin1.exercise10;
 
 public class BuclesWhile {
     public static void main(String[] args) {

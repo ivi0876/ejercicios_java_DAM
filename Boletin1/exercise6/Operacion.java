@@ -1,4 +1,4 @@
-package exercise6;
+package Boletin1.exercise6;
 import java.util.Scanner;
 
 public class Operacion {
