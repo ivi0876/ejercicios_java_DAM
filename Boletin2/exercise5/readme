@@ -1,0 +1,12 @@
+Programa un conversor de temperaturas:
+Al usuario se le pide los grados Celsius y se le da dos opciones: si los quiere
+convertir a Farenheit (1) o a Kelvin (2). Las opciones serán 1 y 2 para pedir
+tipo de conversión y 3 salir.
+Usa como plantilla el código que hay en el apartado de la estructura do-while
+pero solo con las 3 opciones aquí indicadas .
+El programa se repetirá hasta que se elija 3.
+Finalmente muestra el resultado de la conversión con 2 decimales. Usa doubles
+para las conversiones.
+Las funciones de conversión son:
+K=C+273.15
+F=1.8*C+32
