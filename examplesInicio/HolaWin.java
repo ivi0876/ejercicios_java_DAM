@@ -1,3 +1,4 @@
+package examplesInicio;
 /*
 Ejemplo basico de aplicación grafica
 */

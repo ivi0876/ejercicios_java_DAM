@@ -1,3 +1,4 @@
+package examplesInicio;
 import java.util.Scanner;
 @SuppressWarnings({ "resource" })
 public class Hola2 {
