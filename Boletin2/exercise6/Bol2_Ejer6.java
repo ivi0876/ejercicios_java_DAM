@@ -29,15 +29,15 @@ public class Bol2_Ejer6 {
                     break;
                 case 'b':
                     // Inverso de un número
-                    double numB;
+                    double numeroinverso;
                     do {
                         System.out.print("Introduce un número distinto de 0: ");
-                        numB = scanner.nextDouble();
-                        if (numB == 0) {
+                        numeroinverso = scanner.nextDouble();
+                        if (numeroinverso == 0) {
                             System.out.println("Error: El número no puede ser 0");
                         }
-                    } while (numB == 0);
-                    double inverso = 1 / numB;
+                    } while (numeroinverso == 0);
+                    double inverso = 1 / numeroinverso;
                     System.out.printf("El inverso es: %.4f%n", inverso);
                     break;
                 case 'c':
