@@ -50,7 +50,7 @@ public class Bol2_Ejer6 {
                             System.out.println("Error: El número no puede ser negativo.");
                         }
                     } while (numero3 < 0);
-                    double raiz = Math.sqrt(numero3);
+                    double raiz = Math.sqrt(numero3);                                   //* esta funcion hace la raiz cuadrada
                     System.out.printf("La raíz cuadrada es: %.3f%n", raiz);
                     break;
                 case 'd':
