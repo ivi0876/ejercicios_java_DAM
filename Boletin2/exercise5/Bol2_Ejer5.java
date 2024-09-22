@@ -24,14 +24,14 @@ public class Bol2_Ejer5 {
                 System.out.print("Introduzca la temperatura en celsius: ");
                 celsius=sc.nextDouble();
                 double resultadoF = 1.8*celsius + 32;
-                System.out.printf("La temperatura en Farenheit: %.3f%n", resultadoF);
+                System.out.printf("La temperatura en Farenheit: %.2f%n", resultadoF);
                 System.out.println();
                 break;
                 case 2:
                 System.out.print("Introduzca la temperatura en celsius: ");
                 celsius=sc.nextDouble();
                 double resultadoK = celsius + 273.15;
-                System.out.printf("La temperatura en Kelvin: %.3f%n", resultadoK);
+                System.out.printf("La temperatura en Kelvin: %.2f%n", resultadoK);
                 System.out.println();
                 break;
                 case 3:
