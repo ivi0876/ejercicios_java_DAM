@@ -1,8 +1,7 @@
-Realizar un menú con las opciones (los números se piden en cada opción, es
-decir, en cada case):
-a) Cuadrado de un número real. Se mostrará con 2 decimales de
-aproximación
-b) Inverso de un número (1/x). Se mostrará con 4 decimales de
+# Realizar un menú con las opciones (los números se piden en cada opción, es decir, en cada case):
+
+[x] a) Cuadrado de un número real. Se mostrará con 2 decimales de aproximación
+[x] b) Inverso de un número (1/x). Se mostrará con 4 decimales de
 aproximación. No se admite el 0 (vuelve a pedirlo hasta que se meta
 distinto de 0).
 c) Raíz cuadrada de un número. Debe mostrar el resultado con 3 decimales
