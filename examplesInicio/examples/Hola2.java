@@ -1,4 +1,4 @@
-package examplesInicio;
+package examplesInicio.examples;
 import java.util.Scanner;
 @SuppressWarnings({ "resource" })
 public class Hola2 {
