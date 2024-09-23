@@ -14,7 +14,7 @@ public class Bol2_Ejer9 {
 
         // Inicializamos el máximo
         System.out.print("Introduce número: ");
-        int maximo = sc.nextInt(); // Guardamos el primer número como el mayor por ahora
+        int maximo = sc.nextInt(); // guardo el primer numero porque de momento es el mas grande que ha escrito el usuario.
 
         // Bucle para pedir los números restantes
         for (int i = 1; i < cantidad; i++) {
