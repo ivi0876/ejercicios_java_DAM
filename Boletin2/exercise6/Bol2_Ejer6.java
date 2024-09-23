@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Bol2_Ejer6 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         int opcion;
         do {
             // Mostrar menú
@@ -16,14 +16,14 @@ public class Bol2_Ejer6 {
             System.out.println("e) Operación OR entre dos enteros");
             System.out.println("f) Salir");
             System.out.print("Elige una opción: ");
-            String opcionStr = scanner.nextLine(); // ! IMPORTANTE PONER NEXlINE EN VEZ SOLO DE NEXT
+            String opcionStr = sc.nextLine(); // ! IMPORTANTE PONER NEXlINE EN VEZ SOLO DE NEXT
             opcion = opcionStr.charAt(0);  // Leer la opción como char
 
             switch (opcion) {
                 case 'a':
                     // Cuadrado de un número real
                     System.out.print("Introduce un número real: ");
-                    double numero1 = scanner.nextDouble();
+                    double numero1 = sc.nextDouble();
                     double cuadrado = numero1 * numero1;
                     System.out.printf("El cuadrado es: %.2f%n", cuadrado);
                     break;
@@ -32,7 +32,7 @@ public class Bol2_Ejer6 {
                     double numeroinverso;
                     do {
                         System.out.print("Introduce un número distinto de 0: ");
-                        numeroinverso = scanner.nextDouble();
+                        numeroinverso = sc.nextDouble();
                         if (numeroinverso == 0) {
                             System.out.println("Error: El número no puede ser 0");
                         }
@@ -45,7 +45,7 @@ public class Bol2_Ejer6 {
                     double numero3;
                     do {
                         System.out.print("Introduce un número positivo o 0: ");
-                        numero3 = scanner.nextDouble();
+                        numero3 = sc.nextDouble();
                         if (numero3 < 0) {
                             System.out.println("Error: El número no puede ser negativo.");
                         }
@@ -56,18 +56,18 @@ public class Bol2_Ejer6 {
                 case 'd':
                     // Operación AND entre dos enteros
                     System.out.print("Introduce el primer número entero: ");
-                    int numeroAnd1 = scanner.nextInt();
+                    int numeroAnd1 = sc.nextInt();
                     System.out.print("Introduce el segundo número entero: ");
-                    int numeroAnd2 = scanner.nextInt();
+                    int numeroAnd2 = sc.nextInt();
                     int resultadoAnd = numeroAnd1 & numeroAnd2;
                     System.out.printf("Resultado de AND en hexadecimal: %x%n", resultadoAnd);
                     break;
                 case 'e':
                     // Operación OR entre dos enteros
                     System.out.print("Introduce el primer número entero: ");
-                    int numeroOr1 = scanner.nextInt();
+                    int numeroOr1 = sc.nextInt();
                     System.out.print("Introduce el segundo número entero: ");
-                    int numeroOr2 = scanner.nextInt();
+                    int numeroOr2 = sc.nextInt();
                     int resultadoOr = numeroOr1 | numeroOr2;
                     System.out.printf("Resultado de OR en hexadecimal: %x%n", resultadoOr);
                     break;
