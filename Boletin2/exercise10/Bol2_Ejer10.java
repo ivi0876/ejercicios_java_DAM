@@ -1,7 +1,6 @@
 package Boletin2.exercise10;
 import java.util.Scanner;
 @SuppressWarnings({ "resource" })
-
 public class Bol2_Ejer10 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
