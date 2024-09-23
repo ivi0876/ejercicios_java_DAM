@@ -2,7 +2,7 @@ package Boletin1.exercise11;
 
 public class Bucles3 {
     public static void main(String[] args) {
-        // ?PREGUNTAR SI PUEDO PONER VARIABLE GENERAL PARA TODO
+        // ?PREGUNTAR SI PUEDO PONER VARIABLE GENERAL PARA
         int acu = 0;
         int cont = 1;
         //Primer bucle uso for porque necesitamos mostrar la evolucion
