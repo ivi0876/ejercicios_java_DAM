@@ -16,7 +16,6 @@ public class Bol2_Ejer8 {
         // usar ternaria para optimizar comparaciones
         int mayor = (num1 >= num2) ? ((num1 >= num3) ? num1 : num3) : ((num2 >= num3) ? num2 : num3);
 
-        // Mostrar el resultado
        System.out.println("El mayor de los tres números es: " + mayor);
 
     }   
