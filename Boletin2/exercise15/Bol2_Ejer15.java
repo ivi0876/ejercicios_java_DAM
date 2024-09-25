@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Bol2_Ejer15 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        double tasaCambio = 0.84; // 1 EUR = 0.84 GBP
+        double tasaCambio = 0.84; // 1 EURO = 0.84 GBP
         int opcion;
         double cantidad;
         
