@@ -7,8 +7,8 @@ public class Bol2_Ejer11 {
 
         // Bucle que se ejecuta hasta que la suma sea mayor que 10000
         while (suma <= 10000) {
-            suma += N; // Sumamos N a la suma acumulada
-            N++;       // Incrementamos N
+            suma += N; 
+            N++;       
         }
 
         // ! IMPORTANTE  valor de N - 1 porque al salir del bucle N ya se ha incrementado
