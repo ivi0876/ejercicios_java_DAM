@@ -1,5 +1,6 @@
 package Boletin2.exercise16;
 import java.util.Scanner;
+@SuppressWarnings({ "resource" })
 
 public class Bol2_Ejer16 {
     // Códigos de colores ANSI
@@ -85,7 +86,6 @@ public class Bol2_Ejer16 {
         } while (jugarDeNuevo == 'S' || jugarDeNuevo == 's');
 
         System.out.println(ANSI_YELLOW + "Gracias por jugar. ¡Hasta la próxima!" + ANSI_RESET);
-        scanner.close();
     }
 
 }
