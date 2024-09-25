@@ -5,9 +5,9 @@ import java.util.Scanner;
 
 public class Bol2_Ejer18 {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         long numero;
         double factorial = 1;
-        Scanner sc = new Scanner(System.in);
 		
         do {  //introducir por teclado un número mayor o igual a cero
             System.out.print("Introduce un numero entero: ");
