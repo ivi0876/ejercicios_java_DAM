@@ -55,7 +55,7 @@ public class Bol2_Ejer15 {
                 default:
                     System.out.println("Opción no válida, elige de nuevo.");
             }
-        } while (opcion != 3); // Repite el menú hasta que el usuario elija salir
+        } while (opcion != 3);
         
     }
 }
