@@ -1,7 +1,7 @@
 package Boletin2.ProjectFinal;
 import java.util.Random;
 import java.util.Scanner;
-
+@SuppressWarnings({ "resource" })
 public class CarreraCaballos {
 
     public static void main(String[] args) throws InterruptedException {
@@ -9,7 +9,7 @@ public class CarreraCaballos {
         Random random = new Random();
         
         // Longitud de la pista
-        final int LONGITUD_PISTA = 30;
+        final int LONGITUD_PISTA = 10;
         
         // Array para almacenar las posiciones de los caballos
         int[] posiciones = {0, 0, 0, 0};
@@ -54,10 +54,7 @@ public class CarreraCaballos {
                     break;
                 }
             }
-                Thread.sleep(500);
-            
+                Thread.sleep(500);   
         }
-        
-        scanner.close();
     }
 }
