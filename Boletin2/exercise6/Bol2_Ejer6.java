@@ -16,7 +16,7 @@ public class Bol2_Ejer6 {
             System.out.println("e) Operación OR entre dos enteros");
             System.out.println("f) Salir");
             System.out.print("Elige una opción: ");
-            String opcionStr = sc.nextLine(); // ! IMPORTANTE PONER NEXlINE EN VEZ SOLO DE NEXT
+            String opcionStr = sc.nextLine(); 
             opcion = opcionStr.charAt(0);  // Leer la opción como char
 
             switch (opcion) {
