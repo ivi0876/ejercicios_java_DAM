@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class CarreraCaballos {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
         
@@ -12,7 +12,7 @@ public class CarreraCaballos {
         final int LONGITUD_PISTA = 30;
         
         // Array para almacenar las posiciones de los caballos
-        int[] posiciones = {0, 0, 0, 0}; // 4 caballos
+        int[] posiciones = {0, 0, 0, 0};
         
         // Pedir al usuario que seleccione un caballo entre 1 y 4
         System.out.print("Seleccione un caballo (1-4): ");
@@ -54,13 +54,8 @@ public class CarreraCaballos {
                     break;
                 }
             }
+                Thread.sleep(500);
             
-            // Pausa antes del siguiente "turno"
-            try {
-                Thread.sleep(500); // Espera de 500ms para simular el avance
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
         }
         
         scanner.close();
