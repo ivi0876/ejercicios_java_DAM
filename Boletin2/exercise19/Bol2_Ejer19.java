@@ -14,7 +14,7 @@ public class Bol2_Ejer19 {
         System.out.print("Elige una opción: ");
         int opcion = sc.nextInt();
 
-        // Solicitar el número de asteriscos
+
         System.out.print("¿Cuántos asteriscos deseas dibujar? ");
         int N = sc.nextInt();
 
@@ -24,7 +24,7 @@ public class Bol2_Ejer19 {
                 for (int i = 0; i < N; i++) {
                     System.out.print("*");
                 }
-                System.out.println();  // Salto de línea al final
+                System.out.println();
                 break;
 
             case 2:
