@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class CarreraCaballos {
 
     public static void main(String[] args) throws InterruptedException {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         Random random = new Random();
         
         // Longitud de la pista
@@ -16,12 +16,12 @@ public class CarreraCaballos {
         
         // Pedir al usuario que seleccione un caballo entre 1 y 4
         System.out.print("Seleccione un caballo (1-4): ");
-        int caballoUsuario = scanner.nextInt() - 1;  // Restamos 1 para trabajar con índice de array
+        int caballoUsuario = sc.nextInt() - 1;  // Restamos 1 para trabajar con índice de array
         
         // Verificar entrada válida
         while (caballoUsuario < 0 || caballoUsuario >= 4) {
             System.out.print("Error, seleccione un caballo válido (1-4): ");
-            caballoUsuario = scanner.nextInt() - 1;
+            caballoUsuario = sc.nextInt() - 1;
         }
         
         // Inicia la carrera
