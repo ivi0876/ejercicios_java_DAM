@@ -13,6 +13,7 @@ public class Bol3_Ejer1 {
     public static void par(int num){
         if(num%2 == 0) {
             System.out.printf("El numero es par");
+            System.out.println();
         }else {
             System.out.println("El numero no es par");
         }
