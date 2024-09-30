@@ -21,10 +21,10 @@ public class Bol3_Ejer1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n;
-        int num=10;
+
         System.out.print("Cuantas lineas en blanco quieres: ");
         n = sc.nextInt();
         lineasblanco(n);
-        par(num);
+        par(n);
     }
 }
