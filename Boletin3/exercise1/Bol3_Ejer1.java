@@ -1,5 +1,5 @@
 package Boletin3.exercise1;
-public class Bol3Ejer1 {
+public class Bol3_Ejer1 {
 
     /**
      * Imprime n líneas en blanco.
