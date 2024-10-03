@@ -41,8 +41,6 @@ public class Bol2_Ejer18 {
             i++;
         } while (i <= numero);
 
-        // Asegurarse de que factorial sea 1 cuando el número es 0
-        factorial *= (numero == 0) ? 1 : 1; // *= multiplico y igualo, es una forma de resumir la operacion
         System.out.println("El factorial de " + numero + " usando bucle do-while es: " + factorial);
         
     }
