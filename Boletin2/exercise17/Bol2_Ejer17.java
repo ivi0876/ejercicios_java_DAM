@@ -29,7 +29,7 @@ public class Bol2_Ejer17 {
 
             // Preguntar si desea repetir el programa
             System.out.print("¿Desea probar otro número? (S/N): ");
-            repetir = sc.next().charAt(0);
+            repetir = sc.nextLine().charAt(0);
 
         } while (repetir == 'S' || repetir == 's');
 
