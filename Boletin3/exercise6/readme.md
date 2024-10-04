@@ -15,4 +15,5 @@ Si se considera necesario, se pueden realizar más subprogramas para evitar repe
 código u organizar adecuadamente el mismo.
 Además debes modificar el juego para añadirle una opción para un solo jugador
 (plantea un menú de 1 o 2 jugadores al principio del programa). De forma que el
-número inicial deb
+número inicial debe ser aleatorio generado por el ordenador mediante la función
+Math.random().
