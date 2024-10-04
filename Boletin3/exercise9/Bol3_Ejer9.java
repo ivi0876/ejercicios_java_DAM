@@ -4,7 +4,7 @@ import java.util.Scanner;
 @SuppressWarnings({ "resource" })
 
 
-public class Quiniela {
+public class Bol3_Ejer9 {
 
     /**
      * Genera un resultado aleatorio para la quiniela normal.
