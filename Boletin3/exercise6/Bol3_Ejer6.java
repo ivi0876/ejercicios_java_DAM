@@ -52,6 +52,7 @@ public class Bol3_Ejer6 {
         do {
             numeroJugador = pideNumero();
             int resultado = compara(numeroAdivinar, numeroJugador);
+            System.out.println(numeroAdivinar + " "+numeroJugador);;
             switch (resultado) {
                 case 0:
                     System.out.println("El número es mayor.");
@@ -60,7 +61,7 @@ public class Bol3_Ejer6 {
                     System.out.println("¡Has acertado! El número era " + numeroAdivinar);
                     break;
                 case 2:
-                    System.out.println("El número es menor.");
+                    System.out.println("El número ingresado es menor.");
                     break;
             }
             intentos++;
@@ -77,12 +78,13 @@ public class Bol3_Ejer6 {
         int numeroAdivinar = pideNumero();
         int intentos = 0;
         int numeroJugador;
-
+        
         System.out.println("Jugador 2: intenta adivinar el número.");
-
+        
         do {
             numeroJugador = pideNumero();
             int resultado = compara(numeroAdivinar, numeroJugador);
+            System.out.println(numeroAdivinar + " "+numeroJugador);;
             switch (resultado) {
                 case 0:
                     System.out.println("El número es mayor.");
@@ -91,7 +93,7 @@ public class Bol3_Ejer6 {
                     System.out.println("¡Has acertado! El número era " + numeroAdivinar);
                     break;
                 case 2:
-                    System.out.println("El número es menor.");
+                    System.out.println("El número ingresado es menor.");
                     break;
             }
             intentos++;
