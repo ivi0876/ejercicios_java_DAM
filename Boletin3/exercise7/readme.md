@@ -13,3 +13,10 @@ b) En el main codificar un menú con las siguientes opciones:
 Las tres primeras opciones deben realizarse utilizando el método creado en el
 apartado anterior (por supuesto, sin modificarlo). Para la cuarta debe crearse
 un nuevo método con parámetro radio.
+
+
+
+
+
+
+
