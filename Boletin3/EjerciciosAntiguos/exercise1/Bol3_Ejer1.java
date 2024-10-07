@@ -1,4 +1,4 @@
-package Boletin3.exercise1;
+package Boletin3.EjerciciosAntiguos.exercise1;
 public class Bol3_Ejer1 {
 
     /**

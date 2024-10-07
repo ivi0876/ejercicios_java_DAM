@@ -1,4 +1,4 @@
-package Boletin3.exercise3;
+package Boletin3.EjerciciosAntiguos.exercise3;
 //!  RECORDAR COMENTAR todo el codigo, mejor practica para el futuro
 
 
