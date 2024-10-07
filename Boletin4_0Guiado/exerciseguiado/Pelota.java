@@ -1,4 +1,4 @@
-package Boletin4Guiado.exerciseguiado;
+package Boletin4_0Guiado.exerciseguiado;
 
 /**
  * Clase Pelota que representa una pelota con un tipo y un radio.

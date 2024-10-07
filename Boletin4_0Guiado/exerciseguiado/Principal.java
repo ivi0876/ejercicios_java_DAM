@@ -1,4 +1,4 @@
-package Boletin4Guiado.exerciseguiado;
+package Boletin4_0Guiado.exerciseguiado;
 /**
  * Clase principal para probar el funcionamiento de la clase Pelota.
  */
