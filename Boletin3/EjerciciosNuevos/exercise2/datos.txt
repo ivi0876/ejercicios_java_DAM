@@ -1,3 +1,4 @@
 Juan
 10
 Par, Positivo
+Nueva línea añadida con appendFileOtra línea añadida con appendFile2
