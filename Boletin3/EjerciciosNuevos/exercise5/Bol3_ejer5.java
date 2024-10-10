@@ -1,7 +1,7 @@
 package Boletin3.EjerciciosNuevos.exercise5;
 import java.util.Scanner;
-import java.io.PrintWriter;
-import java.io.IOException;
+// import java.io.PrintWriter;
+// import java.io.IOException;
 
 @SuppressWarnings({ "resource" })
 
