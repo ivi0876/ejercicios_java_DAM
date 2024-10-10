@@ -48,7 +48,7 @@ public class Bol3_Ejer1 {
         System.out.println("El número -5 es: " + positivoONegativo(-5));
 
         // Guardar datos en un archivo
-        try (PrintWriter writer = new PrintWriter("./datos.txt")) {
+        try (PrintWriter writer = new PrintWriter("Boletin3/EjerciciosNuevos/exercise2/datos.txt")) {
             String nombre = "Juan";
             int numero = 10;
             String paridad = esPar(numero) ? "Par" : "Impar";
