@@ -1,7 +1,8 @@
 package Boletin3.EjerciciosNuevos.exercise5;
 import java.util.Scanner;
-// import java.io.PrintWriter;
-// import java.io.IOException;
+
+import java.io.PrintWriter;
+import java.io.IOException;
 
 @SuppressWarnings({ "resource" })
 
@@ -39,10 +40,17 @@ public class Bol3_ejer5 {
 
         // Mostrar todos los números primos menores que el número ingresado
         System.out.println("Los números primos menores que " + limite + " son:");
-        for (int i = 2; i < limite; i++) {
-            if (esPrimo(i)) {
-                System.out.print(i + " ");
+        try(PrintWriter w = new PrintWriter("Boletin3/EjerciciosNuevos/exercise5/primos.txt")) {
+            for (int i = 2; i < limite; i++) {
+                if (esPrimo(i)) {
+                    System.out.print(i + " ");
+                    w.println(i);
+                }
             }
+        } catch (IOException e) {
+            System.out.println("Error al escribir en el archivo: " + e.getMessage());
         }
     }
 }
+
+//  Empezar a usar las excepciones para mejor codigo
