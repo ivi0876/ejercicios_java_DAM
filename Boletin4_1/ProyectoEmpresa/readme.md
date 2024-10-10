@@ -36,9 +36,9 @@ clase, rellena con datos que se le pidan al usuario y luego muéstralos. Muestra
 también lo que lleva hacienda.
 
 ----------------------------------------------------------------------------------------------
+No se validan juntos
 
-
-Nota: continuación del 3 pero NO se validan juntos.
+Nota: continuación del ejercicio anterior.
 Realiza en el mismo proyecto donde hiciste Empleado y IUEmpleado (es decir, en la
 carpeta ProyectoEmpresa) otra clase denominada Directivo. Dispone también de
 los campos privados nombre (String), apellidos (String), edad (int), dni (String) y
