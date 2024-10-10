@@ -1,23 +1,25 @@
 package Boletin4_1.ProyectoEmpresa;
 
-// import java.util.Scanner;
-// @SuppressWarnings({ "resource" })
+import java.util.Scanner;
+@SuppressWarnings({ "resource" })
 
 public class Main {
     public static void main(String[] args) {
-        // Crear un objeto Empleado y la IU correspondiente
-        Empleado empleado = new Empleado();
-        IUEmpleado interfaz = new IUEmpleado(empleado);
+        // Crear un objeto Directivo y la interfaz de usuario
+        Directivo directivo = new Directivo();
+        IUDirectivo interfaz = new IUDirectivo(directivo);
 
         // Pedir datos al usuario
         interfaz.pedir();
 
-        // Mostrar todos los datos del empleado
-        System.out.println("\nDatos completos del empleado:");
+        // Mostrar todos los datos
+        System.out.println("\nDatos del directivo:");
         interfaz.mostrar();
 
-        // Mostrar solo lo que se lleva hacienda
-        System.out.println("\nMostrando lo que se lleva Hacienda:");
-        interfaz.mostrar(5);
+        // Mostrar cuánto se lleva de beneficios
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Introduce el beneficio total de la empresa:");
+        double beneficioEmpresa = scanner.nextDouble();
+        System.out.println("El directivo se lleva de beneficios: " + directivo.calcularGanancia(beneficioEmpresa));
     }
 }

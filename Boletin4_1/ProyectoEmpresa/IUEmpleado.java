@@ -3,8 +3,6 @@ package Boletin4_1.ProyectoEmpresa;
 import java.util.Scanner;
 @SuppressWarnings({ "resource" })
 
-
-
 public class IUEmpleado {
     public Empleado empleado;
 
