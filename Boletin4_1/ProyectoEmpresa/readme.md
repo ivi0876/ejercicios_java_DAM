@@ -34,3 +34,29 @@ Mostrará solo el dato indicado en el parámetro.
 Para probarlo en el programa principal (en clase aparte) crea un objeto de esta
 clase, rellena con datos que se le pidan al usuario y luego muéstralos. Muestra
 también lo que lleva hacienda.
+
+----------------------------------------------------------------------------------------------
+
+
+Nota: continuación del 3 pero NO se validan juntos.
+Realiza en el mismo proyecto donde hiciste Empleado y IUEmpleado (es decir, en la
+carpeta ProyectoEmpresa) otra clase denominada Directivo. Dispone también de
+los campos privados nombre (String), apellidos (String), edad (int), dni (String) y
+añade un campo que indica el nombre del departamento que dirige (String) y otro
+de porcentaje de beneficios (real).
+Todos son privados y tienen set/get. En concreto en el caso del departamento,
+cuando se guarde un nombre debe guardarlo en mayúsculas (averigua c ómo pasar
+un String a mayúsculas, es sencillo ) y cuando se lea dicho nombre se devolverá entre comillas dobles.
+En el caso del porcentaje de beneficios el valor debe estar entre 0 y 100. Si se
+mete uno fuera de ese rango se establecerá la propiedad a 0.
+Realiza un constructor que inicialice todos los campos y otro que no tenga
+parámetros.
+Otro método al que se le pase el dinero global de beneficio que ha tenido la
+empresa y devuelva la ganancia del directivo que obtiene a partir de la propiedad
+porcentaje de beneficio y dicho beneficio empresarial (el parámetro). Si los
+beneficios son negativos devuelve 0.
+Debe añadirse una clase denominada IUDirectivo que sea equivalente a la de
+Empleado pero con los datos de Directivo.
+Para probarlo en el programa principal crea un objeto de esta clase, rellena con
+datos que se le pidan al usuario y luego muéstralos. Muestra también el dinero que
+se lleva de beneficios.
