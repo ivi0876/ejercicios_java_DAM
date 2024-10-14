@@ -9,7 +9,7 @@ public class Bol3_Ejer13 {
 
     // Colores para la salida en consola
     private static final String ANSI_RESET = "\u001B[0m";
-    private static final String ANSI_GREEN = "\u001B[32m"; // Aciertos
+    // private static final String ANSI_GREEN = "\u001B[32m"; // Aciertos
     private static final String ANSI_RED = "\u001B[31m";   // Números del ordenador
     private static final String ANSI_BLUE = "\u001B[34m";  // Números seleccionados
 
