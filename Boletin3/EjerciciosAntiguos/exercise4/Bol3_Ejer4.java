@@ -59,7 +59,7 @@ public class Bol3_Ejer4 {
 
         // Parte b) Mostrar las primeras n potencias de un número
         int n = 4;
-        System.out.println("\nLas primeras " + n + " potencias de " + base + " son:");
+        // System.out.println("\nLas primeras " + n + " potencias de " + base + " son:");
         mostrarPotencias(base, n);
 
         // Parte c) Sumar la progresión geométrica
