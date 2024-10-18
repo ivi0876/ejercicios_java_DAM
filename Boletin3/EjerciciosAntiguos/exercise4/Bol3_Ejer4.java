@@ -54,7 +54,7 @@ public class Bol3_Ejer4 {
     public static void main(String[] args) {
         // Parte a) Probar la función potencia
         double base = 2;
-        int exponente = 9;
+        int exponente = -5;
         System.out.println("La potencia de " + base + "^" + exponente + " es: " + potencia(base, exponente));
 
         // Parte b) Mostrar las primeras n potencias de un número

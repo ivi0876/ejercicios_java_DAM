@@ -18,5 +18,6 @@ public class boletinguiado3 {
         int numero = sc.nextInt();
         // Devolvemos el número leído
         return numero;
+
     }
 }
