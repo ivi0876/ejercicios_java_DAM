@@ -1,7 +1,8 @@
-package Boletin1.EJeSinMirar.exercise5;
+package Boletin1.EJeSinMirar.execise6;
+
 import java.util.Scanner;
 
-public class Ejerr5_bol1 {
+public class Operacion {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int repetir = 1;  // inicio en 1 para que entre al menos una vez en el bucle
@@ -56,4 +57,3 @@ public class Ejerr5_bol1 {
         sc.close();
     }
 }
-
