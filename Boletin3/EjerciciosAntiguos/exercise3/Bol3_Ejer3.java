@@ -32,11 +32,11 @@ public class Bol3_Ejer3 {
             System.out.print("Introduce un año (0 para terminar): ");
             year = scanner.nextInt();
 
-            if (year != 0) {
+            if (year != 0) { // el año es diferente a cero
                 if (bisiesto(year)) {
-                    System.out.println("El año " + year + " es bisiesto.");
+                    System.out.println("El año " + year + " es bisiesto."); // si devuelve bisiesto
                 } else {
-                    System.out.println("El año " + year + " no es bisiesto.");
+                    System.out.println("El año " + year + " no es bisiesto."); //si devuelve false
                 }
             }
         } while (year != 0);
