@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+@SuppressWarnings({ "resource" })
 public class boletinguiado3 {
     public static void main(String[] args) {
         // Llamamos a la función pideNumero con el mensaje y guardamos el valor retornado
