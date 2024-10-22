@@ -20,14 +20,6 @@ public class Bol3_Ejer7B {
         }
     }
 
-    /**
-     * Método que calcula el área de un cuadrado.
-     * @param lado El lado del cuadrado.
-     * @return El área del cuadrado.
-     */
-    public static double calcularAreaCuadrado(double lado) {
-        return lado * lado;  // Área de un cuadrado
-    }
 
     /**
      * Método que calcula el área de un círculo.
@@ -76,7 +68,7 @@ public class Bol3_Ejer7B {
                     // Área de un cuadrado
                     System.out.print("Introduce el lado: ");
                     double lado = sc.nextDouble();
-                    System.out.printf("El área del cuadrado es: %.3f\n", calcularAreaCuadrado(lado));
+                    System.out.printf("El área del cuadrado es: %.3f\n", calcularAreaBaseAltura(lado, lado, true));
                     break;
                 case 4:
                     // Área de un círculo
