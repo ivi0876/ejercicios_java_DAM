@@ -15,7 +15,7 @@ public class Bol3_ejer5 {
 
     public static void main(String[] args)  throws Exception {
         Scanner scanner = new Scanner(System.in);
-        PrintWriter writer = new PrintWriter("boletin3/EjerciciosNuevos/exercise5/bisiesto.txt");
+        PrintWriter writer = new PrintWriter("Boletin3/EjerciciosNuevos/exercise5/bisiesto.txt");
 
         int year;
 
@@ -40,6 +40,8 @@ public class Bol3_ejer5 {
                 }
             }
         }
+        writer.close();
+        
         } while (year != 0);
 
         System.out.println("Programa terminado.");
