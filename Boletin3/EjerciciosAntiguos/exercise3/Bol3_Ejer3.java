@@ -34,7 +34,7 @@ public class Bol3_Ejer3 {
 
             if (year != 0) { // el año es diferente a cero
                 if (bisiesto(year)) {
-                    System.out.println("El año " + year + " es bisiesto."); // si devuelve bisiesto
+                    System.out.println("El año " + year + " es bisiesto."); // si devuelve true
                 } else {
                     System.out.println("El año " + year + " no es bisiesto."); //si devuelve false
                 }
