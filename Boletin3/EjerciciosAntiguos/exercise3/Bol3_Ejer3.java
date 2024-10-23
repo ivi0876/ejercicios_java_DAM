@@ -14,14 +14,17 @@ public class Bol3_Ejer3 {
      * @return true si el año es bisiesto, false si no lo es.
      */
     public static boolean bisiesto(int year) {
-        if (year % 4 == 0) {
-            if (year % 100 == 0) {
-                return year % 400 == 0;  // Solo es bisiesto si también es divisible por 400
-            }
-            return true;  // Es bisiesto si es divisible por 4 pero no por 100
-        }
-        return false;  // No es bisiesto si no es divisible por 4
-    }
+    
+        return (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0));
+    
+        //     if (year % 4 == 0) {
+    //         if (year % 100 == 0) {
+    //             return year % 400 == 0;  // Solo es bisiesto si también es divisible por 400
+    //         }
+    //         return true;  // Es bisiesto si es divisible por 4 pero no por 100
+    //     }
+    //     return false;  // No es bisiesto si no es divisible por 4
+    } 
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
