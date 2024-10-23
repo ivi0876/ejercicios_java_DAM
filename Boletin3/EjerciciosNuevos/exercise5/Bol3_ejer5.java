@@ -13,8 +13,9 @@ public class Bol3_ejer5 {
 
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args)  throws Exception {
         Scanner scanner = new Scanner(System.in);
+        PrintWriter writer = new PrintWriter("boletin3/EjerciciosNuevos/exercise5/bisiesto.txt");
 
         int year;
 
@@ -26,10 +27,19 @@ public class Bol3_ejer5 {
             if (year != 0) { // el año es diferente a cero
                 if (bisiesto(year)) {
                     System.out.println("El año " + year + " es bisiesto."); // si devuelve true
+                    writer.printf("%d Si es bisiesto \n", year);
                 } else {
                     System.out.println("El año " + year + " no es bisiesto."); // si devuelve false
+                    writer.printf("%d No es bisiesto \n", year);
+                }
+
+                //Escribir numeros bisiestos hasta año actual.
+            for(int i = year; i <= 2024; i++){
+                if (bisiesto(i)){
+                    writer.println(i);
                 }
             }
+        }
         } while (year != 0);
 
         System.out.println("Programa terminado.");
