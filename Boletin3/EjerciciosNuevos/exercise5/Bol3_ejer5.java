@@ -36,12 +36,13 @@ public class Bol3_ejer5 {
                 //Escribir numeros bisiestos hasta año actual.
             for(int i = year; i <= 2024; i++){
                 if (bisiesto(i)){
-                    writer.println(i);
+                    writer.print(i);
+                    writer.println("es bisiesto \n");
                 }
             }
         }
         writer.close();
-        
+
         } while (year != 0);
 
         System.out.println("Programa terminado.");
