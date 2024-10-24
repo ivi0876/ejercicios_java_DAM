@@ -1,77 +1,68 @@
 package Boletin3.EjerciciosNuevos.exercise7;
 
-// las siguientes importaciones explicadas en el readme
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.nio.file.StandardOpenOption;
-import java.util.List;
+import java.util.Scanner;
 
 public class Bol3_Ejer7 {
 
-    /**
-     * Lee el contenido de un archivo y lo devuelve como una cadena.
-     * @param nombreArchivo Nombre del archivo a leer.
-     * @return El contenido del archivo como una cadena.
-     */
-    public static String saveFile(String nombreArchivo) {
+    // Función a) Lee el archivo completo y devuelve el contenido como String
+    public static String saveFile(String fileName) {
+        String content = "";
         try {
-            List<String> lineas = Files.readAllLines(Paths.get(nombreArchivo));
-            return String.join("\n", lineas);
-        } catch (IOException e) {
-            System.out.println("Error al leer el archivo: " + e.getMessage());
-            return "";
+            File file = new File(fileName);
+            Scanner reader = new Scanner(file);
+            while (reader.hasNextLine()) {
+                content += reader.nextLine() + "\n";
+            }
+            reader.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("Archivo no encontrado: " + fileName);
         }
+        return content;
     }
 
-    /**
-     * Añade texto al final de un archivo. Lee el archivo, concatena la cadena y lo guarda de nuevo.
-     * @param nombreArchivo Nombre del archivo.
-     * @param texto Texto a añadir al archivo.
-     */
-    public static void appendFile(String nombreArchivo, String texto) {
+    // Función b) Lee el archivo, concatena el nuevo texto y lo guarda de nuevo
+    public static void appendFile(String fileName, String newText) {
         // Leer el archivo usando saveFile
-        String contenidoActual = saveFile(nombreArchivo);
-        // Concatenar el nuevo texto
-        String nuevoContenido = contenidoActual + "\n" + texto;
-        
-        // Guardar el contenido actualizado en el archivo
+        String currentContent = saveFile(fileName);
+        // Concatenar el nuevo texto al contenido actual
+        currentContent += newText;
+        // Escribir el archivo con el contenido actualizado
         try {
-            Files.write(Paths.get(nombreArchivo), nuevoContenido.getBytes());
+            FileWriter writer = new FileWriter(fileName);
+            writer.write(currentContent);
+            writer.close();
         } catch (IOException e) {
-            System.out.println("Error al escribir en el archivo: " + e.getMessage());
+            System.out.println("Ocurrió un error al escribir en el archivo.");
         }
     }
 
-    /**
-     * Añade texto al final de un archivo usando el método Files.write con StandardOpenOption.APPEND.
-     * @param nombreArchivo Nombre del archivo.
-     * @param texto Texto a añadir al archivo.
-     */
-    public static void appendFile2(String nombreArchivo, String texto) {
+    // Función c) Añade el texto directamente al final del archivo usando append
+    public static void appendFile2(String fileName, String newText) {
         try {
-            Files.write(Paths.get(nombreArchivo), (texto + "\n").getBytes(), StandardOpenOption.APPEND);
+            // Usar FileWriter en modo append (segundo parámetro true)
+            FileWriter writer = new FileWriter(fileName, true);
+            writer.write(newText);
+            writer.close();
         } catch (IOException e) {
-            System.out.println("Error al escribir en el archivo: " + e.getMessage());
+            System.out.println("Ocurrió un error al escribir en el archivo.");
         }
     }
 
     public static void main(String[] args) {
-        String nombreArchivo = "Boletin3/EjerciciosNuevos/exercise2/datos.txt";
-        
         // Probar saveFile
-        System.out.println("Contenido original del archivo:");
-        System.out.println(saveFile(nombreArchivo));
+        String fileContent = saveFile("archivo_ejercicio2.txt");
+        System.out.println("Contenido del archivo:\n" + fileContent);
 
         // Probar appendFile
-        appendFile(nombreArchivo, "Nueva línea añadida con appendFile");
-        System.out.println("\nContenido del archivo después de appendFile:");
-        System.out.println(saveFile(nombreArchivo));
+        appendFile("archivo_ejercicio2.txt", "Texto añadido al final.");
+        System.out.println("Contenido después de añadir con appendFile:\n" + saveFile("archivo_ejercicio2.txt"));
 
         // Probar appendFile2
-        appendFile2(nombreArchivo, "Otra línea añadida con appendFile2");
-        System.out.println("\nContenido del archivo después de appendFile2:");
-        System.out.println(saveFile(nombreArchivo));
+        appendFile2("archivo_ejercicio2.txt", "Texto añadido al final con appendFile2.\n");
+        System.out.println("Contenido después de añadir con appendFile2:\n" + saveFile("archivo_ejercicio2.txt"));
     }
 }
-
