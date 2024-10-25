@@ -35,14 +35,14 @@ public class Bol3_ejer5 {
         writer.close();
 
         // Leer el archivo y mostrar los años bisiestos excepto el primero, cada uno en una nueva línea
-        Scanner fileReader = new Scanner(new File("Boletin3/EjerciciosNuevos/exercise5/bisiesto.txt"));
-        if (fileReader.hasNextLine()) fileReader.nextLine(); // Omitir la primera línea
+        Scanner leerarchivo = new Scanner(new File("Boletin3/EjerciciosNuevos/exercise5/bisiesto.txt"));
+        if (leerarchivo.hasNextLine()) leerarchivo.nextLine(); // Omitir la primera línea
         
-        while (fileReader.hasNextLine()) {
-            String bisiestoYear = fileReader.nextLine();
+        while (leerarchivo.hasNextLine()) {
+            String bisiestoYear = leerarchivo.nextLine();
             System.out.println(bisiestoYear);
         }
-        fileReader.close();
+        leerarchivo.close();
 
         System.out.println("Programa terminado.");
     }
