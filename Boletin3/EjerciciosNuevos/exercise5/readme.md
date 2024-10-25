@@ -8,9 +8,15 @@ Un ejemplo de como puede quedar el archivo:
 2016
 2020
 2024
+
+
+
 A continuación lee el archivo y muestra en pantalla todos los años menos el
 primero. Debe estar separados por comas en la misma linea y ocupando 6
 caracteres.
+
+
+
 Si este programa lo tienes en la misma carpeta que el de bisiesto no es necesario
 que copies la función, puedes acceder a ella poniendo NombreClase.nombreFuncion.
 Por ejemplo:
