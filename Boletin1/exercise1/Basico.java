@@ -1,4 +1,4 @@
-
+package Boletin1.exercise1;
 import java.util.Scanner;
 @SuppressWarnings({ "resource" })
 public class Basico {
