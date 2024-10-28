@@ -1,3 +1,5 @@
 Texto añadido al final.Texto añadido al final con appendFile2.
 Texto añadido al final.Texto añadido al final con appendFile2.
 Texto añadido al final.Texto añadido al final con appendFile2.
+Texto añadido al final.Texto añadido al final con appendFile2.
+Texto añadido al final.Texto añadido al final con appendFile2.
