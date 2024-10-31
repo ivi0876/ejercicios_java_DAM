@@ -1,4 +1,4 @@
-package Boletin1.EJeSinMirar.execise6;
+package Boletin1.EJeSinMirar.exercise6;
 
 import java.util.Scanner;
 
