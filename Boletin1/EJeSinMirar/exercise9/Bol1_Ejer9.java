@@ -13,6 +13,16 @@ public class Bol1_Ejer9 {
         for (contador = 10; contador >= 0; contador--) {
             System.out.println("Contador: " + contador);
         }
+
+        for (contador = 2; contador <=20; contador+=2 ) {
+            System.out.println("Numeros pares entre 1 y 20: " + contador);
+        }
+
+        for (contador = 1; contador <=20; contador++ ) {
+            if(contador % 2 == 0) {
+                System.out.println("Los numeros pares son: " + contador);
+            }
+        }
     }
 }
 
