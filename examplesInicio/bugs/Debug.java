@@ -15,6 +15,7 @@ Scanner sc = new Scanner(System.in);
 int limite;
 System.out.println("¿Hasta que número (incluido) deseas sumar?");
 limite = sc.nextInt();
+sc.close();
 System.out.printf("Resultado: %d\n", sumaHasta(limite));
 }
 }
