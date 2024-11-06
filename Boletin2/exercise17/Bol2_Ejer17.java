@@ -27,6 +27,9 @@ public class Bol2_Ejer17 {
             }
             System.out.println("\nLa suma de los múltiplos es: " + suma);
 
+            // Consumir el salto de línea restante
+            sc.nextLine();
+
             // Preguntar si desea repetir el programa
             System.out.print("¿Desea probar otro número? (S/N): ");
             repetir = sc.nextLine().charAt(0);
