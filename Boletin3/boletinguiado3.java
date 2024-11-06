@@ -1,3 +1,4 @@
+package Boletin3;
 import java.util.Scanner;
 @SuppressWarnings({ "resource" })
 public class boletinguiado3 {
