@@ -10,6 +10,7 @@ int contador = 0;
 int limite;
 System.out.println("¿Hasta que número (incluido) deseas sumar?");
 limite = sc.nextInt();
+sc.close();
 
 while (contador <= limite) {
     // System.err.printf("contador: %d, limite: %d suma: %d\n", contador, limite, suma);
