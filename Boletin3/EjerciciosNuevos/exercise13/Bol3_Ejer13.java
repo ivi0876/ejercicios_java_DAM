@@ -82,7 +82,7 @@ public class Bol3_Ejer13 {
     }
 
     public static void mostrarArchivo() {
-        try (Scanner fileScanner = new Scanner(new java.io.File("ejercicio9datos.txt"))) {
+        try (Scanner fileScanner = new Scanner(new java.io.File("Boletin3/EjerciciosNuevos/exercise13/ejercicio13datos.txt"))) {
             System.out.println("\nContenido del archivo de récords:");
             while (fileScanner.hasNextLine()) {
                 System.out.println(fileScanner.nextLine());
