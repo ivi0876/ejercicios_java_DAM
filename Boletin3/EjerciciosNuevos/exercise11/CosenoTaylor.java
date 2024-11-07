@@ -22,9 +22,7 @@ public class CosenoTaylor {
     public static double cosenoTaylor(double x, int n) {
         double suma = 0;
         for (int i = 0; i <= n; i++) {
-            if (i % 2 == 0) {
-                suma += potencia(-1, i / 2) * potencia(x, 2 * i) / factorial(2 * i);
-            }
+            suma += potencia(-1, i / 2) * potencia(x, 2 * i) / factorial(2 * i);
         }
         return suma;
     }
@@ -32,9 +30,9 @@ public class CosenoTaylor {
     public static void main(String[] args) {
         for (double x = 0.1; x <= 1.0; x += 0.1) {
             double cosenoAproximado = cosenoTaylor(x, 4);
-            double cosenoReal = Math.cos(x);
-            double error = Math.abs(cosenoAproximado - cosenoReal);
-            System.out.printf("Coseno de %.1f: %.5f (error: %.5f)%n", x, cosenoAproximado, error);
+            // double cosenoReal = Math.cos(x);
+            
+            System.out.printf("Coseno de %.1f: %.5f %n", x , cosenoAproximado);
         }
     }
 }
