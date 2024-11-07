@@ -1,5 +1,5 @@
 package Boletin3.EjerciciosNuevos.exercise11;
-import java.lang.Math;
+
 
 public class CosenoTaylor {
 
@@ -30,7 +30,6 @@ public class CosenoTaylor {
     public static void main(String[] args) {
         for (double x = 0.1; x <= 1.0; x += 0.1) {
             double cosenoAproximado = cosenoTaylor(x, 4);
-            // double cosenoReal = Math.cos(x);
             
             System.out.printf("Coseno de %.1f: %.5f %n", x , cosenoAproximado);
         }
