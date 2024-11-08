@@ -49,7 +49,7 @@ public class ComparadorYMultiplo {
                 System.out.println("Resultado no válido.");
                 break;
         }
-
+////////////////////////////////////////////////////////////////////
         
         System.out.print("Introduce el primer número entero: ");
         int entero1 = sc.nextInt();
