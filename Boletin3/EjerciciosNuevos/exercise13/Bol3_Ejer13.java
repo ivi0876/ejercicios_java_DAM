@@ -98,7 +98,7 @@ public class Bol3_Ejer13 {
 
         do {
             System.out.print("Introduce tu nombre: ");
-            String nombreUsuario = sc.next();
+            String nombreUsuario = sc.nextLine();
 
             System.out.print("¿Cuántas caras tendrán los dados? ");
             int caras = sc.nextInt();
@@ -106,7 +106,7 @@ public class Bol3_Ejer13 {
             jugarDados(caras, nombreUsuario);
 
             System.out.print("¿Quieres jugar otra vez? (s/n): ");
-            respuesta = sc.next();
+            respuesta = sc.nextLine();
 
         } while (respuesta.equalsIgnoreCase("s"));
 
