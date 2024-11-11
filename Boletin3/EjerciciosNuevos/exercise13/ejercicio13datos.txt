@@ -3,3 +3,4 @@ pepe         4   1
 juan        40   0
 fran        10   0
 pepe        20   0
+frank       60   0

@@ -104,7 +104,7 @@ public class Bol3_Ejer10 {
             jugarDados(caras);
 
             System.out.print("¿Quieres jugar otra vez? (s/n): ");
-            respuesta = sc.next();
+            respuesta = sc.nextLine();
 
         } while (respuesta.equalsIgnoreCase("s"));
 
