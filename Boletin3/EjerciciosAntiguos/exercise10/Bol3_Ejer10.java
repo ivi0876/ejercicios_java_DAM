@@ -100,6 +100,7 @@ public class Bol3_Ejer10 {
             System.out.println("Bienvenido al juego de los dados.");
             System.out.print("¿Cuántas caras tendrán los dados? ");
             int caras = sc.nextInt();
+            sc.nextLine(); // Limpia el buffer de entrada para la próxima entrada
 
             jugarDados(caras);
 
