@@ -18,7 +18,7 @@ public class Bol3_ejer5 {
         System.out.print("Introduce un año: ");
         int year = scanner.nextInt();
 
-        // Escribir si el año ingresado es bisiesto o no
+        // Escribir si el año ingresado es bisiesto o no 
         if (bisiesto(year)) {
             writer.printf("%d Si es bisiesto\n", year);
         } else {
