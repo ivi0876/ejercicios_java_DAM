@@ -1,0 +1,1 @@
+Nombre: fff, Numero Caras Dado: 4, Numero Aciertos: 1

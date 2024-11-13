@@ -47,7 +47,7 @@ public class Bol3_Ejer13 {
                 System.out.print(ANSI_BLUE + i + ANSI_RESET + " ");
             } else {
                 System.out.print(i + " ");
-            }
+            }       
             if (i % 5 == 0) {
                 System.out.println();
             }
