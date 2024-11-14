@@ -1,6 +1,9 @@
 import java.io.PrintWriter;
 import java.util.Scanner;
 
+
+// este es usar funciones basicos
+
 public class juegodados_Boll3 {
     /**
      * Genera un número del 1 al numero de caras indicado por el usuario
