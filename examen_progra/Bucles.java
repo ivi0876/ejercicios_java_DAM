@@ -25,5 +25,5 @@ public class Bucles {
 (hczlo ion otro tpo de buile si no iontrolcs el for, iontcrá menos):
 • 1er buile: Muestre los números impcres entre 5 y 40 de formc decreciente y en unc iolumnc de formc que lcs
 unidcdes queden clinecdcs medicnte formcteo ion print sec el número de unc o dos iifrcs.
-• 2o buile: Multplique los números pcres entre del 1 y 10. Muestrc el resultcdo fuerc del buile.
+• 2o bucle: Multplique los números pcres entre del 1 y 10. Muestra el resultado fuera del bucle.
  */
