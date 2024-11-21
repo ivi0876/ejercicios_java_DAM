@@ -21,7 +21,7 @@ public class piramide {
     }
 
     // Función para imprimir un triángulo de n líneas
-    private static void printTriangulo(int n) {
+    public static void printTriangulo(int n) {
         for (int i = 1; i <= n; i++) {
             printCharacters('*', i);
             System.out.println();
@@ -29,7 +29,7 @@ public class piramide {
     }
 
     // Función para imprimir una pirámide de n líneas
-    private static void printPiramide(int n) {
+    public static void printPiramide(int n) {
         for (int i = 1; i <= n; i++) {
             printCharacters(' ', n - i);            // Espacios antes de los asteriscos
             printCharacters('*', 2 * i - 1);        // Asteriscos en cada fila
@@ -38,7 +38,7 @@ public class piramide {
     }
 
 
-    private static void printCharacters(char ch, int count) {
+    public static void printCharacters(char ch, int count) {
         for (int i = 0; i < count; i++) {
             System.out.print(ch);
         }
