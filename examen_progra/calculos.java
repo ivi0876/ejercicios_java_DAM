@@ -13,9 +13,16 @@ public class calculos {
             return a / Math.abs(b);
             
 
+        } else {
+            if(a < 10) {
+                return (int) (Math.random()*11) +10;
+            } else {
+                return (int) (Math.random() * (a -10 +1)) +10;
+            }
         }
     }
     public static void main(String[] args) {
-        
+        int mostrar = calcular(2,2);
+        System.out.println(mostrar);
     }
 }
