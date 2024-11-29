@@ -26,7 +26,7 @@ public class CarrerasCaballos {
         while (seguirJugando) {
             // Menú inicial
             System.out.println(PURPLE + "*****************************************");
-            System.out.println("*     ¡BIENVENIDO A LA CARRERA ÉPICA!   *");
+            System.out.println("*     ¡BIENVENIDO A LA CARRERA !   *");
             System.out.println("*****************************************");
             System.out.println(RESET + "Tienes " + GREEN + puntos + RESET + " puntos.");
             System.out.println("Selecciona tu caballo (1 a 4):");
