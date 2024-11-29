@@ -1,9 +1,11 @@
 package Boletin2.ProjectFinal;
+
 import java.util.Random;
 import java.util.Scanner;
-@SuppressWarnings({ "resource" })
 
+@SuppressWarnings("resource")
 public class CarrerasCaballos {
+    // Colores ANSI
     public static final String RESET = "\033[0m";
     public static final String RED = "\033[31m";
     public static final String GREEN = "\033[32m";
@@ -15,105 +17,127 @@ public class CarrerasCaballos {
     public static void main(String[] args) throws InterruptedException {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
-        int[] posiciones = {0, 0, 0, 0}; // Posiciones de los caballos
+        int[] posiciones = {0, 0, 0, 0}; // Posiciones iniciales
         int meta = 50; // Distancia de la carrera
         int seleccionUsuario;
+        int puntos = 100; // Puntos iniciales para el usuario
+        boolean seguirJugando = true;
 
-        // Menú inicial con arte ASCII
-        System.out.println(PURPLE + "*****************************************");
-        System.out.println("*     ¡BIENVENIDO A LA CARRERA ÉPICA!   *");
-        System.out.println("*****************************************");
-        System.out.println(RESET + "Selecciona tu caballo (1 a 4):");
-        System.out.println("1. " + RED + "Caballo Rojo" + RESET);
-        System.out.println("2. " + GREEN + "Caballo Verde" + RESET);
-        System.out.println("3. " + YELLOW + "Caballo Amarillo" + RESET);
-        System.out.println("4. " + BLUE + "Caballo Azul" + RESET);
+        while (seguirJugando) {
+            // Menú inicial
+            System.out.println(PURPLE + "*****************************************");
+            System.out.println("*     ¡BIENVENIDO A LA CARRERA ÉPICA!   *");
+            System.out.println("*****************************************");
+            System.out.println(RESET + "Tienes " + GREEN + puntos + RESET + " puntos.");
+            System.out.println("Selecciona tu caballo (1 a 4):");
+            System.out.println("1. " + RED + "Caballo Rojo" + RESET);
+            System.out.println("2. " + GREEN + "Caballo Verde" + RESET);
+            System.out.println("3. " + YELLOW + "Caballo Amarillo" + RESET);
+            System.out.println("4. " + BLUE + "Caballo Azul" + RESET);
 
-        // Pedir al usuario que seleccione un caballo
-        do {
-            System.out.print(PURPLE + "Elige tu caballo: " + RESET);
-            seleccionUsuario = scanner.nextInt();
-        } while (seleccionUsuario < 1 || seleccionUsuario > 4);
+            // Seleccionar caballo
+            do {
+                System.out.print(PURPLE + "Elige tu caballo: " + RESET);
+                seleccionUsuario = scanner.nextInt();
+            } while (seleccionUsuario < 1 || seleccionUsuario > 4);
 
-        System.out.println(PURPLE + "*****************************************");
-        System.out.println("*        ¡Que comience la carrera!      *");
-        System.out.println("*****************************************" + RESET);
+            // Apuesta
+            System.out.print(CYAN + "¿Cuántos puntos deseas apostar? (máx. " + puntos + "): " + RESET);
+            int apuesta;
+            do {
+                apuesta = scanner.nextInt();
+                if (apuesta > puntos || apuesta <= 0) {
+                    System.out.println(RED + "Apuesta inválida. Inténtalo de nuevo." + RESET);
+                }
+            } while (apuesta > puntos || apuesta <= 0);
 
-        boolean carreraTerminada = false;
+            System.out.println(PURPLE + "*****************************************");
+            System.out.println("*        ¡Que comience la carrera!      *");
+            System.out.println("*****************************************" + RESET);
 
-        // Bucle para la carrera
-        while (!carreraTerminada) {
-            Thread.sleep(500); // Retardo para dar sensación de movimiento
+            boolean carreraTerminada = false;
 
-            // Borrar la pantalla simulando una carrera en tiempo real
-            System.out.print("\033[H\033[2J");
-            System.out.flush();
+            // Bucle de la carrera
+            while (!carreraTerminada) {
+                Thread.sleep(500);
 
-            // Mover los caballos
-            for (int i = 0; i < 4; i++) {
-                int avance = random.nextInt(3) + 1; // Avance de 1 a 3 posiciones
-                posiciones[i] += avance;
+                // Simular movimiento
+                System.out.print("\033[H\033[2J");
+                System.out.flush();
 
-                // Si alguno de los caballos llega a la meta
-                if (posiciones[i] >= meta) {
-                    carreraTerminada = true;
-                    posiciones[i] = meta;
+                for (int i = 0; i < 4; i++) {
+                    posiciones[i] += random.nextInt(3) + 1;
+                    if (posiciones[i] >= meta) {
+                        posiciones[i] = meta;
+                        carreraTerminada = true;
+                    }
+                }
+
+                // Mostrar posiciones
+                for (int i = 0; i < 4; i++) {
+                    String color = "";
+                    switch (i) {
+                        case 0:
+                            color = RED;
+                            break;
+                        case 1:
+                            color = GREEN;
+                            break;
+                        case 2:
+                            color = YELLOW;
+                            break;
+                        case 3:
+                            color = BLUE;
+                            break;
+                        default:
+                            color = RESET;
+                    };
+                    System.out.print(color + "Caballo " + (i + 1) + ": ");
+                    for (int j = 0; j < posiciones[i]; j++) {
+                        System.out.print("-");
+                    }
+                    System.out.println(">");
                 }
             }
 
-            // Imprimir las posiciones de los caballos
+            // Determinar ganador
+            int ganador = 0;
             for (int i = 0; i < 4; i++) {
-                String color = "";
-                switch (i) {
-                    case 0:
-                        color = RED;
-                        break;
-                    case 1:
-                        color = GREEN;
-                        break;
-                    case 2:
-                        color = YELLOW;
-                        break;
-                    case 3:
-                        color = BLUE;
-                        break;
-                }
-
-                // Imprimir el carril del caballo con el color correspondiente
-                System.out.print(color + "Caballo " + (i + 1) + ": ");
-                for (int j = 0; j < posiciones[i]; j++) {
-                    System.out.print("-");
-                }
-                System.out.println(">");
-                System.out.print(RESET);
-            }
-            System.out.println();
-
-            // Verificar si algún caballo ha ganado
-            if (carreraTerminada) {
-                System.out.println(PURPLE + "*****************************************");
-                System.out.println("* ¡LA CARRERA HA TERMINADO!             *");
-                System.out.println("* Caballo Ganador: " + (seleccionUsuario) + "              *");
-                System.out.println("*****************************************" + RESET);
-
-                // Verificar si el caballo seleccionado por el usuario ha ganado
-                if (posiciones[seleccionUsuario - 1] == meta) {
-                    System.out.println(GREEN + "¡Felicidades! ¡Tu caballo ha ganado!" + RESET);
-                } else {
-                    System.out.println(RED + "Lo siento, tu caballo no ganó esta vez." + RESET);
-                }
-
-                // Preguntar si desea volver a jugar
-                System.out.print(PURPLE + "¿Deseas jugar otra partida? (S/N): " + RESET);
-                String respuesta = scanner.next();
-                if (respuesta.equalsIgnoreCase("S")) { // lo que hace esto es que sirve poner mayuscula o minuscula la letra
-                    carreraTerminada = false;
-                    posiciones = new int[]{0, 0, 0, 0}; // Reiniciar posiciones
-                } else {
-                    System.out.println(PURPLE + "¡Gracias por jugar!" + RESET);
+                if (posiciones[i] == meta) {
+                    ganador = i + 1;
                     break;
                 }
             }
+
+            System.out.println(PURPLE + "*****************************************");
+            System.out.println("* ¡LA CARRERA HA TERMINADO!             *");
+            System.out.println("* Caballo Ganador: " + ganador + "                  *");
+            System.out.println("*****************************************" + RESET);
+
+            if (seleccionUsuario == ganador) {
+                System.out.println(GREEN + "¡Felicidades! ¡Tu caballo ha ganado!" + RESET);
+                puntos += apuesta;
+            } else {
+                System.out.println(RED + "Lo siento, tu caballo no ganó esta vez." + RESET);
+                puntos -= apuesta;
+            }
+
+            // Revisar puntos
+            if (puntos <= 0) {
+                System.out.println(RED + "Te has quedado sin puntos. ¡Gracias por jugar!" + RESET);
+                break;
+            }
+
+            // Preguntar si desea jugar otra vez
+            System.out.print(PURPLE + "¿Deseas jugar otra partida? (S/N): " + RESET);
+            String respuesta = scanner.next();
+            if (!respuesta.equalsIgnoreCase("S")) {
+                seguirJugando = false;
+                System.out.println(PURPLE + "¡Gracias por jugar! Te vas con " + GREEN + puntos + RESET + " puntos.");
+            }
+
+            // Reiniciar posiciones
+            posiciones = new int[]{0, 0, 0, 0};
         }
     }
 }
