@@ -14,8 +14,9 @@ public class calculos {
             
 
         }
+                return b;
     }
     public static void main(String[] args) {
-        
+        calcular(10,20);
     }
 }
