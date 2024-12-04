@@ -47,4 +47,11 @@ public class Perro {
         this.setTemperatura(temperatura);
 
     }
+
+    public Perro() {
+        this.nombre = "";
+        this.raza = "raza";
+        this.setEdad(0);
+        this.setTemperatura(36);
+    }
 }

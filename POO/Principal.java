@@ -31,5 +31,7 @@ public class Principal {
         System.out.printf("Tengo un %s llamado %s de %d años\n",
                 perro1.raza, perro1.nombre,
                 perro1.getEdad());
+
+        Perro p2 = new Perro();
     }
 }
