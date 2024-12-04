@@ -1,4 +1,4 @@
-package Bol4_guiado;
+package POO.Bol4_guiado;
 
 public class Pelota {
     public  String tipo;

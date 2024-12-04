@@ -1,4 +1,4 @@
-package Bol4_guiado;
+package POO.Bol4_guiado;
 
 public class Principal {
     public static void main(String[] args) {
@@ -14,20 +14,20 @@ public class Principal {
         // System.out.printf("tipo= %s, radio= %.0f\n", pelota3.tipo, pelota3.radio);
 
         System.out.println("Pelota 2: Tipo: " + pelota2.tipo + ", Radio: " + pelota2.getRadio() + " cm");
-        System.out.println("Pelota 3: Tipo: " + pelota3.tipo + ", Radio: " + pelota3.getRadio() + " cm");
+        System.out.println("Pelota 3: Tipo: " + pelota3.tipo + ", Radio: " + pelota3.getRadio() + " cm\n");
 
         pelota2.inflar(); // Incrementa en 1 cm
         pelota3.inflar(10);
         System.out.println("Funcion inflar:");
         System.out.println("Pelota 2: Tipo: " + pelota2.tipo + ", Radio: " + pelota2.getRadio() + " cm");
-        System.out.println("Pelota 3: Tipo: " + pelota3.tipo + ", Radio: " + pelota3.getRadio() + " cm");
+        System.out.println("Pelota 3: Tipo: " + pelota3.tipo + ", Radio: " + pelota3.getRadio() + " cm\n");
 
 
         // INTERCAMBIAR RADIOS
         intercambiaRadios(pelota2, pelota3);
         System.out.println("Funcion intercambiaRadios:");
         System.out.println("Pelota 2: Tipo: " + pelota2.tipo + ", Radio: " + pelota2.getRadio() + " cm");
-        System.out.println("Pelota 3: Tipo: " + pelota3.tipo + ", Radio: " + pelota3.getRadio() + " cm");
+        System.out.println("Pelota 3: Tipo: " + pelota3.tipo + ", Radio: " + pelota3.getRadio() + " cm\n");
     }
 
     public static void intercambiaRadios(Pelota p1, Pelota p2) {
