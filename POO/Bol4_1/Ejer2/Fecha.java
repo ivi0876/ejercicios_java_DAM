@@ -15,10 +15,10 @@ public class Fecha {
         }
 
     // Constructor con parámetros
-    public Fecha(int dia, int mes, int año) {
+    public Fecha(int dia, int mes, int year) {
         setDia(dia);
         setMes(mes);
-        this.year = año;
+        this.year = year;
     }
 
     public int getDia() {
