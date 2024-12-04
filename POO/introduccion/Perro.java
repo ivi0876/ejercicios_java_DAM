@@ -1,4 +1,4 @@
-package POO;
+package POO.introduccion;
 
 public class Perro {
     public String raza;
