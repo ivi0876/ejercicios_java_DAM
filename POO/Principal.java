@@ -32,6 +32,6 @@ public class Principal {
                 perro1.raza, perro1.nombre,
                 perro1.getEdad());
 
-        Perro p2 = new Perro();
+        // Perro p2 = new Perro();
     }
 }
