@@ -24,7 +24,7 @@ public class Principal {
         System.out.print("Año: ");
         int año2 = sc.nextInt();
 
-
+        sc.close();
         Fecha fecha1 = new Fecha(dia1, mes1, año1);
         Fecha fecha2 = new Fecha(dia2, mes2, año2);
 
