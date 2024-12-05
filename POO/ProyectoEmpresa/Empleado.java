@@ -5,13 +5,13 @@ public class Empleado {
     private String apellidos;
     private int edad;
     private String dni;
-    private double salario_anual;
+    private double salario;
     private double irpf;
-
 
     public String getNombre() {
         return nombre;
     };
+
     public void setNombre(String nombre) {
         this.nombre = nombre;
     };
@@ -40,15 +40,43 @@ public class Empleado {
         this.dni = dni;
     }
 
-    public double getSalario_anual() {
-        return salario_anual;
+    public double getSalario() {
+        return salario;
     }
 
-    public void setSalario_anual(double salario_anual) {
-        this.salario_anual = salario_anual;
+    public void setSalario(double salario) {
+        this.salario = salario;
+
+        if(salario < 6000){
+            this.irpf = 7.5;
+        }
+        else if(salario <=6000 || salario>= 30000){
+            this.irpf = 15.0;
+        } 
+        else if(salario > 30000) {
+            this.irpf = 20.0;
+        }
     }
 
     public double getIrpf() {
         return irpf;
+    }
+
+    // Constructor vacío
+    public Empleado() {
+        this.nombre = "";
+        this.apellidos = "";
+        this.edad = 0;
+        this.dni = "";
+        setSalario(0);
+    }
+
+    // Constructor con parámetros
+    public Empleado(String nombre, String apellidos, int edad, String dni, double salario) {
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.edad = edad;
+        this.dni = dni;
+        setSalario(salario);
     }
 }
