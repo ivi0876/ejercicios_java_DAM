@@ -79,4 +79,9 @@ public class Empleado {
         this.dni = dni;
         setSalario(salario);
     }
+
+    public double hacienda() {
+        // devuelve la cantidad de dinero que se lleva hacienda(usando IRPF y el salario)
+        return (salario * irpf) / 100;
+    }
 }
