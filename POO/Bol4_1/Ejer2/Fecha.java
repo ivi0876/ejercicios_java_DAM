@@ -1,4 +1,4 @@
-// TODO: Pendiente de validar
+
 
 package POO.Bol4_1.Ejer2;
 
