@@ -1,9 +1,10 @@
 package POO.ProyectoEmpresa;
 
-    import java.util.Scanner;
-
+import java.util.Scanner;
+@SuppressWarnings("resource")
 public class Principal {
     public static void main(String[] args) {
+        
         Scanner sc = new Scanner(System.in);
         Empleado empleado = new Empleado();
         IUEmpleado iuempleado = new IUEmpleado(empleado);
