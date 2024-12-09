@@ -45,17 +45,22 @@ public class IUEmpleado {
     public void pedir() {
         System.out.print("Nombre: ");
         String nombre = sc.nextLine();
+        empleado.setNombre(nombre); 
+
         System.out.print("Apellidos: ");
         String apellidos = sc.nextLine();
+        empleado.setApellidos(apellidos); 
+
         System.out.print("Edad: ");
         int edad = sc.nextInt();
-        sc.nextLine(); // Consumir el salto de línea
+        empleado.setEdad(edad);
+
         System.out.print("DNI: ");
         String dni = sc.nextLine();
+        empleado.setDni(dni); 
+
         System.out.print("Salario: ");
         double salario = sc.nextDouble();
-        sc.nextLine(); // Consumir el salto de línea
-
-        empleado = new Empleado(nombre, apellidos, edad, dni, salario);
+        empleado.setSalario(salario);
     }
 }
