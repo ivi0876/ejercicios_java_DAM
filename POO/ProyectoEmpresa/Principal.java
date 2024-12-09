@@ -12,7 +12,6 @@ public class Principal {
         iuempleado.pedir();
         System.out.println("\nDatos del empleado:");
         iuempleado.mostrar();
-
         System.out.print("\nIntroduce un número para mostrar un dato (1-5): ");
         int opcion = sc.nextInt();
         System.out.println("\nMostrando dato seleccionado:");
