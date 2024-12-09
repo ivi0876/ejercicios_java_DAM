@@ -60,4 +60,23 @@ public class Directivo {
     public double getBeneficios(){
         return beneficios;
     }
+
+    public Directivo(){
+        this.nombre = "";
+        this.apellidos="";
+        this.edad = 0;
+        this.dni = "";
+        this.departamento="";
+        this.beneficios=0;
+
+    }
+
+    public Directivo(String nombre,String apellidos, int edad, String dni, String departamento, double beneficios){
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.edad = edad;
+        this.dni = dni;
+        this.departamento = departamento;
+        this.beneficios = beneficios;
+    }
 }
