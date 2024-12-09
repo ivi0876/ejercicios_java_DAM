@@ -45,11 +45,16 @@ public class Directivo {
     }
 
     public String getDepartamento(){
-        return departamento;
+        return "\"" + departamento + "\"";
     }
 
     public void setBeneficios(double beneficios){
         this.beneficios = beneficios;
+        if(beneficios >= 0 && beneficios <=100){
+            this.beneficios = beneficios;
+        } else {
+            this.beneficios = 0;
+        }
     }
 
     public double getBeneficios(){
