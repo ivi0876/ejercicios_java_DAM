@@ -10,12 +10,12 @@ public class Principal {
         IUEmpleado iuempleado = new IUEmpleado(empleado);
 
         iuempleado.pedir();
-        System.out.println("\nMostrando todos los datos del empleado:");
+        System.out.println("\nDatos del empleado:");
         iuempleado.mostrar();
 
-        System.out.print("\nIntroduce un número para mostrar un campo específico (1-5): ");
+        System.out.print("\nIntroduce un número para mostrar un dato  (1-5): ");
         int opcion = sc.nextInt();
-        System.out.println("\nMostrando campo seleccionado:");
+        System.out.println("\nMostrando dato seleccionado:");
         iuempleado.mostrar(opcion);
     }
 }
