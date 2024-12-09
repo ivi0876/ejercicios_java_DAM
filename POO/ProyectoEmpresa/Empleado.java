@@ -50,7 +50,7 @@ public class Empleado {
         if(salario < 6000){
             this.irpf = 7.5;
         }
-        else if(salario <=6000 && salario>= 30000){
+        else if(salario >=6000 && salario<= 30000){
             this.irpf = 15.0;
         } 
         else if(salario > 30000) {
