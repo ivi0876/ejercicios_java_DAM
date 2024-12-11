@@ -1,31 +1,50 @@
 package POO.ProyectoEmpresa;
 
 import java.util.Scanner;
-@SuppressWarnings("resource")
+
 public class Principal {
     public static void main(String[] args) {
-        
         Scanner sc = new Scanner(System.in);
-        Empleado empleado = new Empleado();
-        IUEmpleado iuempleado = new IUEmpleado(empleado);
-
+        Empleado empleado1 = new Empleado();
+        Empleado empleado2 = new Empleado();
         Directivo directivo = new Directivo();
-        IUDirectivo iudirectivo = new IUDirectivo(directivo);
+        Empresa empresa = new Empresa(directivo, empleado1, empleado2);
 
-        iuempleado.pedir();
-        System.out.println("\nDatos del empleado:");
-        iuempleado.mostrar();
-        System.out.print("\nIntroduce un número para mostrar un dato (1-5): ");
-        int opcion = sc.nextInt();
-        System.out.println("\nMostrando dato seleccionado:");
-        iuempleado.mostrar(opcion);
+        int opcion;
+        do {
+            System.out.println("1.- Ver datos personales");
+            System.out.println("2.- Ver datos directivo");
+            System.out.println("3.- MOdificar datos");
+            System.out.println("4.- Pagar");
+            System.out.println("5.- Cobrar");
+            System.out.println("6. Salir");
+            System.out.print("Elige una opción: ");
+            opcion = sc.nextInt();
+            sc.close();
+            switch(opcion) {
+                case 1:
+                    // Código opción 1
+                    break;
+                case 2:
+                    // Código opción 2
+                    break;
+                case 3:
+                    // Código opción 3
+                    break;
+                case 4:
+                    // Código opción 4
+                    break;
+                case 5:
 
-        iudirectivo.pedir();
-        System.out.println("\nDatos del directivo: ");
-        iudirectivo.mostrar();
-        System.out.println("\nIntroduce un número para mostrar un dato (1-5): ");
-        int opcionDirectivo = sc.nextInt();
-        System.out.println("\nMostrando dato seleccionado: ");
-        iudirectivo.mostrar(opcionDirectivo);
+                break;
+                case 6:
+                    System.out.println("Saliendo...");
+                    break;
+                default:
+                    System.out.println("Opción no válida. Inténtalo de nuevo.");
+            }
+        } while(opcion != 6);
+        
+        
     }
 }

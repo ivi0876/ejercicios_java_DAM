@@ -4,7 +4,10 @@ public class Empresa {
     private double ganancias;
     Directivo directivo;
     Empleado empleado1;
-    Empleado empleado2; 
+    Empleado empleado2;
+    IUEmpleado iuempleado;
+    IUDirectivo iudirectivo;
+    
 
 
     public void setGanacias(double ganancias){
@@ -20,6 +23,10 @@ public class Empresa {
         this.directivo = directivo;
         this.empleado1 = empleado1;
         this.empleado2 = empleado2;
+        this.iuempleado = new IUEmpleado(empleado1);
+        this.iuempleado = new IUEmpleado(empleado2);
+        this.iudirectivo = new IUDirectivo(directivo);
+        
 
 
     }
@@ -29,6 +36,10 @@ public class Empresa {
         this.empleado1 = empleado1;
         this.empleado2 = empleado2;
         this.ganancias = ganancias;
+        this.iuempleado = new IUEmpleado(empleado1);
+        this.iuempleado = new IUEmpleado(empleado2);
+        this.iudirectivo = new IUDirectivo(directivo);
+       
 
 
     }
