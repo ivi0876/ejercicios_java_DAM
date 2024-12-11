@@ -79,4 +79,12 @@ public class Directivo {
         this.departamento = departamento;
         this.beneficios = beneficios;
     }
+
+    // Método para calcular la ganancia del directivo
+    public double calcularGanancia(double beneficioEmpresa) {
+        if (beneficioEmpresa > 0) {
+            return beneficioEmpresa * (beneficios / 100);
+        }
+        return 0.0;
+    }
 }

@@ -54,11 +54,11 @@ public class IUEmpleado {
         System.out.print("Edad: ");
         int edad = sc.nextInt();
         empleado.setEdad(edad);
-
+        sc.nextLine();
         System.out.print("DNI: ");
         String dni = sc.nextLine();
         empleado.setDni(dni); 
-
+        // System.out.println();
         System.out.print("Salario: ");
         double salario = sc.nextDouble();
         empleado.setSalario(salario);

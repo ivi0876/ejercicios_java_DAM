@@ -41,23 +41,23 @@ public class IUDirectivo {
 
 
     public void pedir(){
-        System.out.print("Nombre: ");
+        System.out.print("Nombre directivo: ");
         String nombre = sc.nextLine();
         directivo.setNombre(nombre);
 
-        System.out.print("Apellidos: ");
+        System.out.print("Apellidos directivo: ");
         String apellidos = sc.nextLine();
         directivo.setApellidos(apellidos); 
 
-        System.out.print("DNI: ");
+        System.out.print("DNI directivo: ");
         String dni = sc.nextLine();
         directivo.setDni(dni);
 
-        System.out.print("Departamento: ");
+        System.out.print("Departamento directivo: ");
         String departamento = sc.nextLine();
         directivo.setDepartamento(departamento);
 
-        System.out.print("Beneficio: ");
+        System.out.print("Beneficio directivo: ");
         double beneficio = sc.nextDouble();
         directivo.setBeneficios(beneficio);
 

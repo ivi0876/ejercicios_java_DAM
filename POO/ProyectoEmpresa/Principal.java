@@ -9,6 +9,9 @@ public class Principal {
         Empleado empleado = new Empleado();
         IUEmpleado iuempleado = new IUEmpleado(empleado);
 
+        Directivo directivo = new Directivo();
+        IUDirectivo iudirectivo = new IUDirectivo(directivo);
+
         iuempleado.pedir();
         System.out.println("\nDatos del empleado:");
         iuempleado.mostrar();
@@ -16,5 +19,13 @@ public class Principal {
         int opcion = sc.nextInt();
         System.out.println("\nMostrando dato seleccionado:");
         iuempleado.mostrar(opcion);
+
+        iudirectivo.pedir();
+        System.out.println("\nDatos del directivo: ");
+        iudirectivo.mostrar();
+        System.out.println("\nIntroduce un número para mostrar un dato (1-5): ");
+        int opcionDirectivo = sc.nextInt();
+        System.out.println("\nMostrando dato seleccionado: ");
+        iudirectivo.mostrar(opcionDirectivo);
     }
 }
