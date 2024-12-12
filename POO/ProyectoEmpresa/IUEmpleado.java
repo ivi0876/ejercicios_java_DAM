@@ -18,6 +18,7 @@ public class IUEmpleado {
         System.out.println("Salario: " + empleado.getSalario());
         System.out.println("IRPF: " + empleado.getIrpf());
         System.out.println("Dinero lleva hacienda: " + empleado.hacienda());
+        System.out.println("-----------------------------------");
     }
 
     public void mostrar(int opcion) {

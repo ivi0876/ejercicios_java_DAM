@@ -10,6 +10,7 @@ public class Principal {
         Empleado empleado2 = new Empleado("Marta", "Gómez", 25, "34567890C", 18000);
         Empresa empresa = new Empresa(directivo, empleado1, empleado2, 10000);
 
+        // System.out.println(empresa);
         int opcion;
         do {
             mostrarMenu();
@@ -21,7 +22,7 @@ public class Principal {
                     verDatosEmpleados(empresa, sc);
                     break;
                 case 2:
-                    empresa.mostrarDatosDirectivo();
+                    empresa.iudirectivo.mostrar();
                     break;
                 case 3:
                     modificarDatos(empresa, sc);
@@ -66,10 +67,13 @@ public class Principal {
 
             switch (opcion) {
                 case 1:
-                    empresa.mostrarDatosEmpleados(true);
-                    break;
+                   // empresa.iuempleado.mostrar();. mostrarDatosEmpleados(true);
+                   empresa.iuempleado.mostrar();
+                   empresa.iuempleado2.mostrar();
+                   break;
+
                 case 2:
-                    empresa.mostrarDatosEmpleados(false);
+                    // empresa.mostrarDatosEmpleados(false);
                     break;
                 case 3:
                     System.out.println("Saliendo del submenú...");

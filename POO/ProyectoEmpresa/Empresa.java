@@ -6,6 +6,7 @@ public class Empresa {
     Empleado empleado1;
     Empleado empleado2;
     IUEmpleado iuempleado;
+    IUEmpleado iuempleado2;
     IUDirectivo iudirectivo;
     
 
@@ -24,7 +25,7 @@ public class Empresa {
         this.empleado1 = empleado1;
         this.empleado2 = empleado2;
         this.iuempleado = new IUEmpleado(empleado1);
-        this.iuempleado = new IUEmpleado(empleado2);
+        this.iuempleado2 = new IUEmpleado(empleado2);
         this.iudirectivo = new IUDirectivo(directivo);
         
 
@@ -37,7 +38,7 @@ public class Empresa {
         this.empleado2 = empleado2;
         this.ganancias = ganancias;
         this.iuempleado = new IUEmpleado(empleado1);
-        this.iuempleado = new IUEmpleado(empleado2);
+        this.iuempleado2 = new IUEmpleado(empleado2);
         this.iudirectivo = new IUDirectivo(directivo);
        
     }
