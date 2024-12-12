@@ -1,7 +1,7 @@
 package POO.ProyectoEmpresa;
 
 import java.util.Scanner;
-
+//! PREGUNTAR CUANDO MUESTRO DATOS NO APARECE BIEN EL NOMBRE
 public class Principal {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
