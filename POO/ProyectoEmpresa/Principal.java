@@ -76,13 +76,11 @@ public class Principal {
 
             switch (opcion) {
                 case 1:
-                    // empresa.iuempleado.mostrar();. mostrarDatosEmpleados(true);
                     empresa.iuempleado.mostrar();
                     empresa.iuempleado2.mostrar();
                     break;
 
                 case 2:
-                    // empresa.mostrarDatosEmpleados(false);
                     empresa.iuempleado.mostrar(1);
                     empresa.iuempleado2.mostrar(1);
                     break;
