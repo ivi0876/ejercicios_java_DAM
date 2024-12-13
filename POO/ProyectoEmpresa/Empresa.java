@@ -43,6 +43,9 @@ public class Empresa {
        
     }
 
+// * ESTO ESTA EN EL PRINCIPAL.JAVA
+
+
     // public void pagarEmpleados() {
     //     double totalSalarios = empleado1.getSalario() + empleado2.getSalario();
     //     System.out.println("Ganancias antes de pagar: " + ganancias);
