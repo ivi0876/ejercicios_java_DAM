@@ -1,84 +1,60 @@
 package POO.Juego_Ejercicio7;
 
+import java.util.Random;
+
 public class Guerrero {
     private int energia;
     private Posicion posicion;
     private boolean escudo;
-    private char arma;
+    private char arma; // 'A' para arco, 'E' para espada
+    private Random random;
 
     public Guerrero(int energia, Posicion posicion, boolean escudo, char arma) {
         this.energia = energia;
         this.posicion = posicion;
         this.escudo = escudo;
         this.arma = arma;
+        this.random = new Random();
+    }
+
+    public void atacar(Orco orco) {
+        int distancia = this.posicion.distancia(orco.getPosicion());
+        int dano = 0;
+
+        if (arma == 'A' && distancia >= 1 && distancia <= 5) {
+            int baseDano = 50 - 10 * (distancia - 1);
+            dano = baseDano + random.nextInt(11) - 5;
+        } else if (arma == 'E' && distancia >= 1 && distancia <= 2) {
+            int baseDano = distancia == 1 ? 100 : 50;
+            dano = baseDano + random.nextInt(baseDano == 100 ? 41 : 21) - (baseDano == 100 ? 20 : 10);
+        }
+
+        orco.recibirDano(dano);
+        System.out.println("El guerrero atacó al orco infligiendo " + dano + " de daño.");
+    }
+
+    public void recuperarse(int energiaRecuperada) {
+        this.energia += energiaRecuperada;
+        if (this.energia > 1000)
+            this.energia = 1000;
+        System.out.println("El guerrero se recuperó y ahora tiene " + this.energia + " de energía.");
     }
 
     public int getEnergia() {
         return energia;
     }
 
-    public void setEnergia(int energia) {
-        this.energia = energia;
-    }
-
     public Posicion getPosicion() {
         return posicion;
     }
 
-    public boolean tieneEscudo() {
-        return escudo;
-    }
-
-    public void setEscudo(boolean escudo) {
-        this.escudo = escudo;
-    }
-
-    public char getArma() {
-        return arma;
-    }
-
-    public void setArma(char arma) {
-        this.arma = arma;
-    }
-
-    public void atacar(Guerrero enemigo){
-        int distancia = this.posicion.distancia(enemigo.getPosicion());
-        int dano = 0;
-
-        switch (arma) {
-            case 'A':
-                if (distancia >= 4 && distancia <= 5) {
-                    dano = 50;
-                }
-                break;
-
-            case 'E':
-            
-                if (distancia >=1 && distancia <= 2) {
-                    dano = 100;
-                }
-                break;
-            default:
-                break;
+    public void recibirDano(int dano) {
+        if (escudo) {
+            dano /= 2;
         }
-
-        if(dano > 0 ){
-            if(enemigo.tieneEscudo()) {
-                dano /= 2;
-            }
-            enemigo.setEnergia(enemigo.getEnergia()- dano);
-        }
-    }
-
-    public void moverA(int nuevaX, int nuevaY) {
-        this.posicion.moverA(nuevaX, nuevaY);
-    }
-
-    public void desplazar(int dx, int dy) {
-        this.posicion.desplazar(dx, dy);
-    }
-
-    public boolean estaVivo() {
-        return this.energia > 0;
+        energia -= dano;
+        if (energia < 0)
+            energia = 0;
+        System.out.println("El guerrero recibió " + dano + " de daño y ahora tiene " + energia + " de energía.");
     }
 }
