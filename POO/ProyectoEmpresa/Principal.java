@@ -1,6 +1,7 @@
 package POO.ProyectoEmpresa;
 
 import java.util.Scanner;
+
 // TODO Pendiente de revisar */
 public class Principal {
     public static void main(String[] args) {
@@ -28,12 +29,18 @@ public class Principal {
                     modificarDatos(empresa, sc);
                     break;
                 case 4:
-                    empresa.pagarEmpleados();
+                    double totalSalarios = empresa.empleado1.getSalario() + empresa.empleado2.getSalario();
+                    System.out.println("Ganancias antes de pagar: " + empresa.getGanancias());
+                    double resultado = empresa.getGanancias() - totalSalarios;
+                    System.out.println("Ganancias después de pagar: " + resultado);
                     break;
                 case 5:
                     System.out.print("Ingresa cantidad a cobrar: ");
                     double cantidad = sc.nextDouble();
-                    empresa.cobrar(cantidad);
+                    System.out.println("Ganancias antes de cobrar: " + empresa.getGanancias());
+                    double total = empresa.getGanancias() + cantidad;
+                    System.out.println("Ganancias después de cobrar: " + total);
+
                     break;
                 case 6:
                     System.out.println("Saliendo...");
@@ -67,13 +74,15 @@ public class Principal {
 
             switch (opcion) {
                 case 1:
-                   // empresa.iuempleado.mostrar();. mostrarDatosEmpleados(true);
-                   empresa.iuempleado.mostrar();
-                   empresa.iuempleado2.mostrar();
-                   break;
+                    // empresa.iuempleado.mostrar();. mostrarDatosEmpleados(true);
+                    empresa.iuempleado.mostrar();
+                    empresa.iuempleado2.mostrar();
+                    break;
 
                 case 2:
                     // empresa.mostrarDatosEmpleados(false);
+                    empresa.iuempleado.mostrar(1);
+                    empresa.iuempleado2.mostrar(1);
                     break;
                 case 3:
                     System.out.println("Saliendo del submenú...");
