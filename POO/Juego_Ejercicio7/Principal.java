@@ -12,8 +12,9 @@ public class Principal {
         Scanner sc = new Scanner(System.in);
         System.out.println("Empieza el juego de tablero: Guerrero vs Orco");
 
-        System.out.println("Turno del Guerrero:");
+        System.out.println("\nTurno del Guerrero:");
         System.out.println("1. Atacar\n2. Recuperarse");
+        System.out.print("Que quieres hacer? ");
         int opcionGuerrero = sc.nextInt();
 
         if (opcionGuerrero == 1) {
@@ -22,7 +23,7 @@ public class Principal {
             guerrero.recuperarse(50);
         }
 
-        System.out.println("Turno del Orco:");
+        System.out.println("\nTurno del Orco:");
         orco.atacar(guerrero);
 
         System.out.println("Estado final:");

@@ -30,14 +30,14 @@ public class Guerrero {
         }
 
         orco.recibirDano(dano);
-        System.out.println("El guerrero atacó al orco infligiendo " + dano + " de daño.");
+        System.out.println("\nEl guerrero atacó al orco infligiendo " + dano + " de daño.");
     }
 
     public void recuperarse(int energiaRecuperada) {
         this.energia += energiaRecuperada;
         if (this.energia > 1000)
             this.energia = 1000;
-        System.out.println("El guerrero se recuperó y ahora tiene " + this.energia + " de energía.");
+        System.out.println("El guerrero se recuperó y ahora tiene " + this.energia + " de energía.\n");
     }
 
     public int getEnergia() {
@@ -55,6 +55,6 @@ public class Guerrero {
         energia -= dano;
         if (energia < 0)
             energia = 0;
-        System.out.println("El guerrero recibió " + dano + " de daño y ahora tiene " + energia + " de energía.");
+        System.out.println("El guerrero recibió " + dano + " de daño y ahora tiene " + energia + " de energía.\n");
     }
 }

@@ -26,7 +26,7 @@ public class Orco {
         }
 
         guerrero.recibirDano(dano);
-        System.out.println("El orco atacó al guerrero infligiendo " + dano + " de daño.");
+        System.out.println("El orco atacó al guerrero infligiendo " + dano + " de daño.\n");
     }
 
     public void recuperarse(int energiaRecuperada) {
