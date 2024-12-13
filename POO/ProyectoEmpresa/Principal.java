@@ -2,7 +2,7 @@ package POO.ProyectoEmpresa;
 
 import java.util.Scanner;
 
-// TODO Pendiente de revisar */
+//! VALIDADO */
 public class Principal {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
