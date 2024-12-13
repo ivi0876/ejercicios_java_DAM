@@ -32,13 +32,15 @@ public class Principal {
                     double totalSalarios = empresa.empleado1.getSalario() + empresa.empleado2.getSalario();
                     System.out.println("Ganancias antes de pagar: " + empresa.getGanancias());
                     double resultado = empresa.getGanancias() - totalSalarios;
-                    System.out.println("Ganancias después de pagar: " + resultado);
+                    empresa.setGanacias(resultado);
+                    System.out.println("Ganancias después de pagar: " + empresa.getGanancias());
                     break;
                 case 5:
                     System.out.print("Ingresa cantidad a cobrar: ");
                     double cantidad = sc.nextDouble();
                     System.out.println("Ganancias antes de cobrar: " + empresa.getGanancias());
                     double total = empresa.getGanancias() + cantidad;
+                    empresa.setGanacias(total);
                     System.out.println("Ganancias después de cobrar: " + total);
 
                     break;

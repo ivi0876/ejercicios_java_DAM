@@ -1,4 +1,5 @@
 package POO.Juego_Ejercicio7;
+@SuppressWarnings("unused") // sirve para quitarme los avisos de que algo no se esta usando
 
 public class Escenario {
     private int ancho;
@@ -6,4 +7,5 @@ public class Escenario {
     private char terreno;
     Guerrero guerrero;
     Orco orco;
+    
 }
