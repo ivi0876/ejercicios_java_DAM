@@ -69,7 +69,7 @@ public class Empresa {
     //     }
     // }
 
-    public void mostrarDatosDirectivo() {
-        System.out.println("Datos del directivo: " + directivo);
-    }
+    // public void mostrarDatosDirectivo() {
+    //     System.out.println("Datos del directivo: " + directivo);
+    // }
 }

@@ -100,7 +100,7 @@ public class Principal {
         System.out.println("3.- Datos del empleado 2");
         System.out.print("Elige una opción: ");
         int opcion = sc.nextInt();
-        sc.nextLine();
+        sc.nextLine(); // lo necesitamos para consumir la linea
 
         switch (opcion) {
             case 1:
