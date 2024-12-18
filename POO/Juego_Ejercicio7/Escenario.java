@@ -43,4 +43,24 @@ public class Escenario {
             System.out.println();
         }
     }
+
+    public boolean cambiarTerreno() {
+        Random random = new Random();
+        int chance = random.nextInt(10); // Cambiar terreno con una probabilidad del 10%
+        if (chance < 1) {
+            generarTerreno(); // Cambiar terreno completamente aleatorio
+            return true;
+        }
+        return false;
+    }
+
+    public int recuperacionTerreno(int x, int y) {
+        char tipoTerreno = getTerreno(x, y);
+        switch (tipoTerreno) {
+            case 'F': return 30; // Fango: Recupera 30 energía
+            case 'C': return 50; // Campo: Recupera 50 energía
+            case 'M': return 40; // Montaña: Recupera 40 energía
+            default: return 0; // Si no hay terreno válido
+        }
+    }
 }
