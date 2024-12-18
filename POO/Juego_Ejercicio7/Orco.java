@@ -36,6 +36,14 @@ public class Orco {
         System.out.println("El orco se recuperó y ahora tiene " + this.energia + " de energía.");
     }
 
+    public void moverHacia(Posicion objetivo) {
+        int dx = objetivo.getX() > posicion.getX() ? 1 : (objetivo.getX() < posicion.getX() ? -1 : 0);
+        int dy = objetivo.getY() > posicion.getY() ? 1 : (objetivo.getY() < posicion.getY() ? -1 : 0);
+        posicion.desplazar(dx, dy);
+
+        System.out.println("El orco se movió a la posición (" + posicion.getX() + ", " + posicion.getY() + ").");
+    }
+
     public int getEnergia() {
         return energia;
     }

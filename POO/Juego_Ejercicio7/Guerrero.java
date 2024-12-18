@@ -17,6 +17,20 @@ public class Guerrero {
         this.random = new Random();
     }
 
+    public void realizarAccion(int opcion, Orco orco, int energiaRecuperada) {
+        switch (opcion) {
+            case 1: // Atacar
+                atacar(orco);
+                break;
+            case 2: // Recuperarse
+                recuperarse(energiaRecuperada);
+                break;
+            default:
+                System.out.println("Opción no válida. El turno se pierde.\n");
+                break;
+        }
+    }
+
     public void atacar(Orco orco) {
         int distancia = this.posicion.distancia(orco.getPosicion());
         int dano = 0;
