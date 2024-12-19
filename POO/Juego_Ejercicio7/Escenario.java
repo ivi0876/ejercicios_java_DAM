@@ -1,30 +1,44 @@
 package POO.Juego_Ejercicio7;
 
-import java.util.Random;
+//import java.util.Random;
+import java.util.Scanner;
+import java.io.File;
+import java.io.FileNotFoundException;
 
 public class Escenario {
     private int ancho;
     private int alto;
     private char[][] terreno; // 'F' = Fango, 'C' = Campo, 'M' = Montaña
     private Guerrero guerrero;
+    
     private Orco orco;
 
-    public Escenario(int ancho, int alto, Guerrero guerrero, Orco orco) {
-        this.ancho = ancho;
-        this.alto = alto;
-        this.terreno = new char[ancho][alto];
+    public Escenario(String archivoTerreno, Guerrero guerrero, Orco orco) {
         this.guerrero = guerrero;
         this.orco = orco;
-        generarTerreno();
+        cargarTerrenoDesdeArchivo(archivoTerreno);
     }
 
-    private void generarTerreno() {
-        char[] tiposTerreno = {'F', 'C', 'M'};
-        Random random = new Random();
-        for (int i = 0; i < ancho; i++) {
-            for (int j = 0; j < alto; j++) {
-                terreno[i][j] = tiposTerreno[random.nextInt(tiposTerreno.length)];
+    private void cargarTerrenoDesdeArchivo(String archivoTerreno) {
+        try (Scanner sc = new Scanner(new File(archivoTerreno))) {
+            // Leer las dimensiones del mapa
+            this.ancho = sc.nextInt();
+            this.alto = sc.nextInt();
+            sc.nextLine(); // Consumir el salto de línea
+
+            this.terreno = new char[ancho][alto];
+
+            // Leer cada línea del archivo
+            for (int i = 0; i < alto; i++) {
+                String linea = sc.nextLine();
+                for (int j = 0; j < ancho; j++) {
+                    terreno[j][i] = linea.charAt(j); // Leer cada carácter de la línea
+                }
             }
+        } catch (FileNotFoundException e) {
+            System.err.println("Archivo no encontrado: " + archivoTerreno);
+        } catch (Exception e) {
+            System.err.println("Error al cargar el terreno: " + e.getMessage());
         }
     }
 
@@ -35,22 +49,37 @@ public class Escenario {
         return ' ';
     }
 
+
     public void mostrarTablero() {
-        for (int i = 0; i < ancho; i++) {
-            for (int j = 0; j < alto; j++) {
-                System.out.print(terreno[i][j] + " ");
+        for (int i = 0; i < alto; i++) {
+            for (int j = 0; j < ancho; j++) {
+                if (guerrero.getPosicion().getX() == j && guerrero.getPosicion().getY() == i) {
+                    System.out.print("G "); // Mostrar guerrero
+                } else if (orco.getPosicion().getX() == j && orco.getPosicion().getY() == i) {
+                    System.out.print("O "); // Mostrar orco
+                } else {
+                    System.out.print(terreno[j][i] + " "); // Mostrar terreno
+                }
             }
             System.out.println();
         }
     }
 
+
+    // private void generarTerreno() {
+    //     char[] tiposTerreno = {'F', 'C', 'M'};
+    //     Random random = new Random();
+    //     for (int i = 0; i < ancho; i++) {
+    //         for (int j = 0; j < alto; j++) {
+    //             terreno[i][j] = tiposTerreno[random.nextInt(tiposTerreno.length)];
+    //         }
+    //     }
+    // }
+
+
     public boolean cambiarTerreno() {
-        Random random = new Random();
-        int chance = random.nextInt(10); // Cambiar terreno con una probabilidad del 10%
-        if (chance < 1) {
-            generarTerreno(); // Cambiar terreno completamente aleatorio
-            return true;
-        }
+        
+        System.out.println("El cambio de terreno ahora debe realizarse manualmente desde el archivo.");
         return false;
     }
 
