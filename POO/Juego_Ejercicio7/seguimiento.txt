@@ -1,0 +1,7 @@
+logica a usar:
+comprobar armas del guerrero que se pueda escoger.
+pequeña animacion si el orco gana o el guerrero.
+mejorar la interfaz, con colores
+pequeños obstaculos por el camino
+pequeño inventario(armaduras armas, alimentos para recuperarse)
+mejorar la logica de recuperarse
