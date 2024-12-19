@@ -55,7 +55,7 @@ public class Principal {
                     guerrero.getPosicion().desplazar(dx, dy);
                     System.out.println("El guerrero se movió a (" + guerrero.getPosicion().getX() +
                                        ", " + guerrero.getPosicion().getY() + ").");
-                    escenario.mostrarTablero();
+                    escenario.mostrarTablero(); 
                     break;
                     
                 default:
