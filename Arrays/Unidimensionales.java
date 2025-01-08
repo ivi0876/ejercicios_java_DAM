@@ -14,7 +14,7 @@ public class Unidimensionales {
         // Rellena un array con valores aleatorios
         for (int i = 0; i < temperaturas.length; i++){
             temperaturas[i]=Math.random()*50-25;
-        }
+        }   
 
         System.out.println("Tamaño: " + temperaturas.length);
 
