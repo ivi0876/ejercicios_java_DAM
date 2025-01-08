@@ -25,7 +25,7 @@ public class Actividad1 {
         // Mostrar el contenido del array con un for mejorado
         System.out.println("\nContenido del array (usando for mejorado):");
         int index = 1;
-        for (int numero : numeros) { // For mejorado
+        for (int numero : numeros) {
             System.out.println("Número " + (index++) + ": " + numero);
         }
 
@@ -35,10 +35,11 @@ public class Actividad1 {
 
     // c) Función para calcular la media
     public static double calcularMedia(int[] array) {
-        int suma = 0;
+        double suma = 0;
         for (int num : array) { // For mejorado
             suma += num;
         }
-        return (double) suma / array.length;
+        // preguntar a curro return (double)  suma / array.length;
+        return  suma / array.length;
     }
 }
