@@ -12,5 +12,12 @@ public class array {
                 temp[i][j] = (int) (Math.random() * 40 - 10);
             }
         }
+
+        for (int i = 0; i < temp.length; i++) {
+            for (int j = 0; j < temp[i].length; j++) {
+                System.out.printf("%3d", temp[i][j]);
+            }
+            System.out.println();
+        }
     }
 }
