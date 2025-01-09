@@ -1,4 +1,4 @@
-package Arrays.Boletin1.exercise2;
+package Arrays.Boletin1.exercise5;
 
 import java.io.*;
 
