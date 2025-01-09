@@ -48,7 +48,7 @@ public class Bol1Ejer2 {
 
         
         for (int i = 0; i < matriz.length; i++) {
-            System.out.printf("%d ", i);
+            System.out.printf("%-2d", i);
             for (int j = 0; j < matriz[i].length; j++) {
                 System.out.printf("%2c ", matriz[i][j]);
             }
