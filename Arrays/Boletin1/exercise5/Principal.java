@@ -1,80 +1,51 @@
 package Arrays.Boletin1.exercise5;
 
 import java.io.*;
+import java.util.*;
 
 public class Principal {
-    public static void main(String[] args) {
-        String nombreArchivo = "ventas.txt"; 
+    public static void main(String[] args) throws FileNotFoundException {
+        String archivoEntrada = "Arrays/Boletin1/exercise5/ventas.txt";
         if (args.length > 0) {
-            nombreArchivo = args[0]; 
+            archivoEntrada = args[0];
         }
 
-        // b) Comprobamos si el archivo existe
-        File archivo = new File(nombreArchivo);
         Ventas ventas;
-        
-        if (archivo.exists()) {
-            // Si el archivo existe, lo leemos
-            FileReader fr = null;
-            try {
-                fr = new FileReader(archivo);
-                char[] buffer = new char[100]; 
-                int length = fr.read(buffer);  
-                String data = new String(buffer, 0, length);
-                
-                // Dividimos los datos en líneas y procesamos
-                String[] lines = data.split("\n");
-                int año = Integer.parseInt(lines[0].trim()); // Leemos el año
-                String[] ventasStr = lines[1].split(";"); // Leemos las ventas y las dividimos por ";"
-                int[] ventasArray = new int[12];
-                for (int i = 0; i < 12; i++) {
-                    ventasArray[i] = Integer.parseInt(ventasStr[i]);
-                }
-                ventas = new Ventas(año, ventasArray);
-            } catch (IOException e) {
-                e.printStackTrace();
-                return;
-            } finally {
-                try {
-                    if (fr != null) {
-                        fr.close(); 
-                    }
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+
+        File file = new File(archivoEntrada);
+        if (file.exists()) {
+            Scanner scanner = new Scanner(file);
+            int year = Integer.parseInt(scanner.nextLine());
+            String[] datos = scanner.nextLine().split(";");
+            int[] ventasArray = new int[12];
+            for (int i = 0; i < 12; i++) {
+                ventasArray[i] = Integer.parseInt(datos[i]);
             }
+            ventas = new Ventas(year, ventasArray);
+            scanner.close();
         } else {
-            // Si el archivo no existe, creamos un objeto con el año anterior
-            int añoActual = java.util.Calendar.getInstance().get(java.util.Calendar.YEAR);
-            ventas = new Ventas(añoActual - 1);
+            int currentYear = Calendar.getInstance().get(Calendar.YEAR);
+            ventas = new Ventas(currentYear - 1);
         }
 
-        // Mostrar el gráfico de barras
+        // Mostrar gráfico de barras
         ventas.grafica();
 
         // Mostrar la media
-        System.out.printf("Media de ventas: %.2f%n", ventas.media());
+        System.out.printf("Media: %.2f%n", ventas.media());
 
-        // c) Guardar los datos en un archivo nuevo usando FileWriter
-        String archivoSalida = "ventas" + ventas.getAño() + ".txt";
-        FileWriter fw = null;
-        try {
-            fw = new FileWriter(archivoSalida);
-            fw.write(ventas.getAño() + "\n"); 
-            for (int i = 0; i < 12; i++) {
-                fw.write(ventas.ventas[i] + (i < 11 ? ";" : "")); // Escribe las ventas, separadas por ;
-            }
-            fw.write("\n"); // Nueva línea al final
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                if (fw != null) {
-                    fw.close(); 
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
+        // Guardar datos en un archivo
+        String archivoSalida = "ventas" + ventas.getYear() + ".txt";
+        PrintWriter writer = new PrintWriter(archivoSalida);
+        writer.println(ventas.getYear());
+        for (int i = 0; i < ventas.ventas.length; i++) {
+            writer.print(ventas.ventas[i]);
+            if (i < ventas.ventas.length - 1) {
+                writer.print(";");
             }
         }
+        writer.close();
+
+        System.out.println("Datos guardados en " + archivoSalida);
     }
 }

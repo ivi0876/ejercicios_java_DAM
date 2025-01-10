@@ -1,66 +1,69 @@
 package Arrays.Boletin1.exercise5;
 
-import java.io.File;
+import java.util.*;
 
 public class Ventas {
-    // a) Un vector público de 12 posiciones de números enteros
     public int[] ventas = new int[12];
+    private int year;
 
-    // b) Un entero privado que representa el año
-    private int año;
-
-    // Constructor que inicializa el vector con números aleatorios entre 0 y 999 y el año con un parámetro
-    public Ventas(int año) {
-        for (int i = 0; i < 12; i++) {
-            ventas[i] = (int) (Math.random() * 1000); // Genera números entre 0 y 999 usando Math.random()
+    // Constructor que inicializa con números aleatorios
+    public Ventas(int year) {
+        setYear(year);
+        for (int i = 0; i < ventas.length; i++) {
+            ventas[i] = (int) (Math.random() * 1000);
         }
-        setAño(año); // Llama al setter para asegurar que el año sea válido
     }
 
-    // Constructor sobrecargado con dos parámetros: el año y el array de ventas
-    public Ventas(int año, int[] ventas) {
-        if (ventas.length != 12) {
-            this.ventas = new int[12];
-            for (int i = 0; i < 12; i++) {
-                this.ventas[i] = (int) (Math.random() * 1000); // Si el array no tiene 12 posiciones, lo inicializa con aleatorios
+    // Constructor sobrecargado con validación de tamaño del vector
+    public Ventas(int year, int[] ventasArray) {
+        setYear(year);
+        if (ventasArray.length == 12) {
+            this.ventas = ventasArray;
+        } else {
+            for (int i = 0; i < ventas.length; i++) {
+                ventas[i] = (int) (Math.random() * 1000);
             }
-        } else {
-            this.ventas = ventas;
-        }
-        setAño(año);
-    }
-
-    // Set para el año: verifica que el año no sea mayor o igual al actual
-    public void setAño(int año) {
-        int añoActual = java.util.Calendar.getInstance().get(java.util.Calendar.YEAR); // Obtiene el año actual
-        if (año >= añoActual) {
-            this.año = añoActual - 1; // Si es mayor o igual, se guarda el año anterior
-        } else {
-            this.año = año;
         }
     }
 
-    // Get para el año
-    public int getAño() {
-        return año;
+    // Getter y setter del año con validación
+    public int getYear() {
+        return year;
     }
 
-    // Método media que devuelve la media de las ventas
+    public void setYear(int year) {
+        int currentYear = Calendar.getInstance().get(Calendar.YEAR);
+        if (year >= currentYear) {
+            this.year = currentYear - 1;
+        } else {
+            this.year = year;
+        }
+    }
+
+    // Método para calcular la media
     public double media() {
         int suma = 0;
-        for (int i = 0; i < ventas.length; i++) {
-            suma += ventas[i];
+        for (int venta : ventas) {
+            suma += venta;
         }
-        return (double) suma / ventas.length;
+        return suma / 12.0;
     }
 
-    // Método grafica que muestra un gráfico de barras
+    // Método para mostrar gráfico de barras
     public void grafica() {
-        System.out.println("Año " + año + ":");
+        System.out.println("Año " + year + ":");
         for (int i = 0; i < ventas.length; i++) {
-            int cantidad = ventas[i];
-            String barras = "#".repeat(cantidad / 100); // Cada bloque de barra representa 100 unidades
-            System.out.println("Mes " + (i + 1) + " (" + cantidad + "): " + barras);
+            int bloques = ventas[i] / 100;
+            System.out.printf("Mes %d (%d): %s%n", i + 1, ventas[i], repetirCaracter('#', bloques));
         }
+    }
+
+    // Método auxiliar para repetir un carácter
+    private String repetirCaracter(char caracter, int veces) {
+        String resultado = "";
+        for (int i = 0; i < veces; i++) {
+            resultado += caracter;
+        }
+        return resultado;
     }
 }
