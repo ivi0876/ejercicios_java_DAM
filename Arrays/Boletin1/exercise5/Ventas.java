@@ -26,7 +26,7 @@ public class Ventas {
         }
     }
 
-    // Getter y setter del año con validación
+    // Gget y set
     public int getYear() {
         return year;
     }
@@ -40,7 +40,7 @@ public class Ventas {
         }
     }
 
-    // Método para calcular la media
+    // media
     public double media() {
         int suma = 0;
         for (int venta : ventas) {
@@ -49,7 +49,7 @@ public class Ventas {
         return suma / 12.0;
     }
 
-    // Método para mostrar gráfico de barras
+    //  mostrar grafico de barras
     public void grafica() {
         System.out.println("Año " + year + ":");
         for (int i = 0; i < ventas.length; i++) {
@@ -58,7 +58,7 @@ public class Ventas {
         }
     }
 
-    // Método auxiliar para repetir un carácter
+    // repetir un caracter
     private String repetirCaracter(char caracter, int veces) {
         String resultado = "";
         for (int i = 0; i < veces; i++) {
