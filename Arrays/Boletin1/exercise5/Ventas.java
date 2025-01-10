@@ -53,15 +53,16 @@ public class Ventas {
     public void grafica() {
         System.out.println("Año " + year + ":");
         for (int i = 0; i < ventas.length; i++) {
-            int bloques = ventas[i] / 100;
-            System.out.printf("Mes %d (%d): %s%n", i + 1, ventas[i], repetirCaracter('#', bloques));
+            
+             int bloques = ventas[i] / 100;
+            System.out.printf("Mes %2d %5s): %s%n", i + 1, "("+ventas[i], repetirCaracter('#', bloques));
         }
     }
 
     // repetir un caracter
     private String repetirCaracter(char caracter, int veces) {
         String resultado = "";
-        for (int i = 0; i < veces; i++) {
+        for (int i = 0; i <= veces; i++) {
             resultado += caracter;
         }
         return resultado;
