@@ -83,7 +83,7 @@ class Matriz {
         // Función borraFila: devuelve la matriz sin la fila indicada
         public int[][] borraFila(int fila) {
             if (fila < 0 || fila >= matriz.length) {
-                return matriz;  // Si la fila no existe, devuelve la matriz completa
+                return matriz;  
             }
     
             int n = matriz.length;
@@ -92,13 +92,14 @@ class Matriz {
     
             // Copiar filas a la nueva matriz, omitiendo la fila eliminada
             for (int i = 0; i < n; i++) {
-                if (i != fila) {  // Si la fila no es la que queremos eliminar
+                if (i != fila) { 
                     nuevaMatriz[nuevaFila] = matriz[i];
                     nuevaFila++;
                 }
     
             return nuevaMatriz;
         }
+                    return nuevaMatriz;
     }
     
     public static class Main {
