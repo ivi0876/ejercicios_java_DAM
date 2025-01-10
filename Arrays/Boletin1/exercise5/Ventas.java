@@ -55,6 +55,7 @@ public class Ventas {
         for (int i = 0; i < ventas.length; i++) {
             
              int bloques = ventas[i] / 100;
+             // el otro parentesis fuera para que quede nivelado
             System.out.printf("Mes %2d %5s): %s%n", i + 1, "("+ventas[i], repetirCaracter('#', bloques));
         }
     }
