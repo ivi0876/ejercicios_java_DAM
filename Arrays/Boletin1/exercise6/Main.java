@@ -91,7 +91,7 @@ class Matriz {
             int nuevaFila = 0;
     
             // Copiar filas a la nueva matriz, omitiendo la fila eliminada
-            for (int i = 0; i < n; i++) {
+            for (int i = 0; i < n;) {
                 if (i != fila) { 
                     nuevaMatriz[nuevaFila] = matriz[i];
                     nuevaFila++;
