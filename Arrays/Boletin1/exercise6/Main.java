@@ -104,12 +104,12 @@ class Matriz {
     
     public static class Main {
             public static void main(String[] args) {
-                Scanner scanner = new Scanner(System.in);
+                Scanner sc = new Scanner(System.in);
                 int N;
                 
                 // Solicitar tamaño de la matriz
                 System.out.print("Introduce el tamaño de la matriz (N): ");
-                N = scanner.nextInt();
+                N = sc.nextInt();
         
                 // Crear un objeto de la clase Matriz
                 Matriz matrizObj = new Matriz(N);
@@ -125,7 +125,7 @@ class Matriz {
                     System.out.println("6. Mostrar matriz sin una fila");
                     System.out.println("7. Salir");
                     System.out.print("Elige una opción: ");
-                    int opcion = scanner.nextInt();
+                    int opcion = sc.nextInt();
         
                     switch (opcion) {
                         case 1:
@@ -147,7 +147,7 @@ class Matriz {
                     case 5:
                         // Mostrar suma de los elementos de una fila
                         System.out.print("Introduce el número de la fila: ");
-                        int fila = scanner.nextInt();
+                        int fila = sc.nextInt();
                         int sumaFila = matrizObj.suma(fila);
                         if (sumaFila == -1) {
                             System.out.println("Fila no válida.");
@@ -158,7 +158,7 @@ class Matriz {
                     case 6:
                         // Mostrar matriz sin una fila
                         System.out.print("Introduce el número de la fila a eliminar: ");
-                        int filaEliminar = scanner.nextInt();
+                        int filaEliminar = sc.nextInt();
                         int[][] nuevaMatriz = matrizObj.borraFila(filaEliminar);
                         Matriz.mostrarMatriz(nuevaMatriz);
                         break;
