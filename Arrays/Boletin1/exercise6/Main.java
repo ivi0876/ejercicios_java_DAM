@@ -5,20 +5,19 @@ import java.util.Scanner;
 class Matriz {
     int[][] matriz;
     
-        // Constructor que inicializa la matriz NxN con valores aleatorios entre 0 y 10 usando Math.random()
+        // matriz con valores aleatorios entre 0 y 10 
         public Matriz(int N) {
             matriz = new int[N][N];
             for (int i = 0; i < N; i++) {
                 for (int j = 0; j < N; j++) {
-                    matriz[i][j] = (int) (Math.random() * 11);  // Generar un número aleatorio entre 0 y 10
+                    matriz[i][j] = (int) (Math.random() * 11);  
                 }
             }
         }
     
-        // Función estática para mostrar la matriz en formato tabla con índices
         public static void mostrarMatriz(int[][] matriz) {
             int n = matriz.length;
-            // Mostrar encabezados de las columnas
+            // Mostrar  columnas
             System.out.print("    ");
             for (int i = 0; i < n; i++) {
                 System.out.printf("%-4d", i);
@@ -35,7 +34,7 @@ class Matriz {
             }
         }
     
-        // Función suma sin parámetros: suma todos los elementos de la matriz
+        // Función suma sin parámetros
         public int suma() {
             int sumaTotal = 0;
             for (int i = 0; i < matriz.length; i++) {
@@ -68,7 +67,7 @@ class Matriz {
             return diagonal ? sumaDiagonal : sumaRestante;
         }
     
-        // Función suma con un parámetro entero: suma de los elementos de una fila
+        // Función suma con un parámetro entero
         public int suma(int fila) {
             if (fila < 0 || fila >= matriz.length) {
                 return -1;  // Si la fila es inválida, retorna -1
@@ -80,7 +79,7 @@ class Matriz {
             return sumaFila;
         }
     
-        // Función borraFila: devuelve la matriz sin la fila indicada
+        // Función borraFila
         public int[][] borraFila(int fila) {
             if (fila < 0 || fila >= matriz.length) {
                 return matriz;  
@@ -90,7 +89,7 @@ class Matriz {
             int[][] nuevaMatriz = new int[n - 1][n];
             int nuevaFila = 0;
     
-            // Copiar filas a la nueva matriz, omitiendo la fila eliminada
+            // Copiar filas a la nueva matriz
             for (int i = 0; i < n;) {
                 if (i != fila) { 
                     nuevaMatriz[nuevaFila] = matriz[i];
