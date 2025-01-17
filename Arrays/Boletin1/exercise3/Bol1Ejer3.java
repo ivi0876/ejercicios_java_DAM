@@ -1,9 +1,6 @@
 package Arrays.Boletin1.exercise3;
 
-
-
 import java.util.ArrayList;
-
 
 public class Bol1Ejer3 {
 
@@ -44,9 +41,9 @@ public class Bol1Ejer3 {
     // a) Crear un ArrayList con valores aleatorios entre 1000 y 5000
     public static ArrayList<Integer> crearArrayListAleatorio(int n) {
         ArrayList<Integer> lista = new ArrayList<>();
-        
+
         for (int i = 0; i < n; i++) {
-            lista.add(1000 + (int)(Math.random() * 4001)); 
+            lista.add(1000 + (int) (Math.random() * 4001));
         }
         return lista;
     }
@@ -95,6 +92,12 @@ public class Bol1Ejer3 {
 
     // f) Eliminar los elementos mayores que un valor dado
     public static void eliminarElementosMayoresQue(ArrayList<Integer> lista, int valorLimite) {
-        lista.removeIf(elemento -> elemento > valorLimite);
+        for (int i = 0; i < lista.size(); i++) {
+            if (lista.get(i) > valorLimite) {
+                lista.remove(i);
+                i--; 
+            }
+        }
+
     }
 }
