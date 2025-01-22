@@ -60,7 +60,7 @@ class Matriz {
                         sumaRestante += matriz[i][j];
                     }
                 }
-            }
+            } 
     
             // verdadero = retorna la suma de la diagonal, 
             // falso = resto
@@ -125,6 +125,7 @@ class Matriz {
                     System.out.println("7. Salir");
                     System.out.print("Elige una opción: ");
                     int opcion = sc.nextInt();
+                   
         
                     switch (opcion) {
                         case 1:
