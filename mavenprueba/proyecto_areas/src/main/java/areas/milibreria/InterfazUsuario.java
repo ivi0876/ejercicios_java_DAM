@@ -23,20 +23,23 @@
  * THE SOFTWARE.
  * =====LICENSE-END=====
  */
+package areas.milibreria;
 
-package areas;
+import java.util.Scanner;
 
-import static org.assertj.core.api.Assertions.assertThat;
+public class InterfazUsuario {
+    private Scanner sc = new Scanner(System.in);
 
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+    public double pideRealPositivo(String mensaje) {
+        double numero;
+        do {
+            System.out.println(mensaje);
+            numero = sc.nextDouble();
+        } while (numero <= 0);
+        return numero;
+    }
 
-@DisplayName("Application")
-public class ApplicationTest {
-
-  @Test
-  @DisplayName("Pointless test")
-  void smokeTest() {
-    assertThat(true).isEqualTo(true);
-  }
+    public void muestraArea(double numero) {
+        System.out.printf("El área es de %.2f unidades cuadradas\n", numero);
+    }
 }

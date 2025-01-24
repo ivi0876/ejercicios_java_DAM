@@ -23,20 +23,25 @@
  * THE SOFTWARE.
  * =====LICENSE-END=====
  */
+package areas.milibreria;
 
-package areas;
+public class Areas {
+    private Areas() {
+    }
 
-import static org.assertj.core.api.Assertions.assertThat;
+    public static double circulo(double radio) {
+        return Math.PI * radio * radio;
+    }
 
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+    public static double triangulo(double base, double altura) {
+        return base * altura / 2;
+    }
 
-@DisplayName("Application")
-public class ApplicationTest {
+    public static double rectangulo(double base, double altura) {
+        return base * altura;
+    }
 
-  @Test
-  @DisplayName("Pointless test")
-  void smokeTest() {
-    assertThat(true).isEqualTo(true);
-  }
+    public static double pentagonoRegular(double lado) {
+        return 1.7205 * lado * lado;
+    }
 }

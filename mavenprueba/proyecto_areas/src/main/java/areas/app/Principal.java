@@ -23,20 +23,18 @@
  * THE SOFTWARE.
  * =====LICENSE-END=====
  */
+package areas.app;
 
-package areas;
+import areas.milibreria.Areas;
+import areas.milibreria.InterfazUsuario;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
-
-@DisplayName("Application")
-public class ApplicationTest {
-
-  @Test
-  @DisplayName("Pointless test")
-  void smokeTest() {
-    assertThat(true).isEqualTo(true);
-  }
+public class Principal {
+    public static void main(String[] args) {
+        InterfazUsuario iu = new InterfazUsuario();
+        double lado, area;
+        System.out.println("Vamos a calcular el área de un pentágono");
+        lado = iu.pideRealPositivo("Introduce el lado (debe ser positivo)");
+        area = Areas.pentagonoRegular(lado);
+        iu.muestraArea(area);
+    }
 }
