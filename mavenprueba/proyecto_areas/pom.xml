@@ -74,8 +74,17 @@
           <version>2.22.0</version>
         </plugin>
         <plugin>
+
           <artifactId>maven-jar-plugin</artifactId>
           <version>3.0.2</version>
+          <configuration>
+            <archive>
+              <manifest>
+                <mainClass>areas.app.Principal</mainClass>
+              </manifest>
+            </archive>
+          </configuration>
+
         </plugin>
         <plugin>
           <artifactId>maven-install-plugin</artifactId>
