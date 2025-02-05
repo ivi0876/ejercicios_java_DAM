@@ -10,7 +10,7 @@ public class Bol2_Ejer5 {
         double celsius;
         
         do {
-            try { // siempre dentro del bucle
+            try {
                 System.out.print("\u001b[1m");
                 System.out.println("Bienvenido al programa de conversión de temperatura\n");
                 System.out.println("Escoja la opción: ");
@@ -19,32 +19,48 @@ public class Bol2_Ejer5 {
                 System.out.println("2.- Kelvin");
                 System.out.println("3.- Salir\n");
                 System.out.print("Opción: ");
-                try{
+                
                 opcion = sc.nextInt();
                 
                 switch (opcion) {
                     case 1:
-                        System.out.print("Introduzca la temperatura en Celsius: ");
-                        celsius = sc.nextDouble();
-                        double resultadoF = 1.8 * celsius + 32;
-                        System.out.printf("La temperatura en Fahrenheit: %.2f%n", resultadoF);
-                        System.out.println();
-                        break;
+                        while (true) {
+                            try {
+                                System.out.print("Introduzca la temperatura en Celsius: ");
+                                celsius = sc.nextDouble();
+                                double resultadoF = 1.8 * celsius + 32;
+                                System.out.printf("La temperatura en Fahrenheit: %.2f%n", resultadoF);
+                                System.out.println();
+                                
+                            } catch (Exception e) {
+                                System.out.println("Error: Entrada no válida. Por favor, ingrese un número.");
+                                sc.nextLine(); 
+                            }
+                            break;
+                        }
                     case 2:
-                        System.out.print("Introduzca la temperatura en Celsius: ");
-                        celsius = sc.nextDouble();
-                        double resultadoK = celsius + 273.15;
-                        System.out.printf("La temperatura en Kelvin: %.2f%n", resultadoK);
-                        System.out.println();
-                        break;
+                        while (true) {
+                            try {
+                                System.out.print("Introduzca la temperatura en Celsius: ");
+                                celsius = sc.nextDouble();
+                                double resultadoK = celsius + 273.15;
+                                System.out.printf("La temperatura en Kelvin: %.2f%n", resultadoK);
+                                System.out.println();
+                            
+                            } catch (Exception e) {
+                                System.out.println("Error: Entrada no valida. Por favor, ingrese un número.");
+                                sc.nextLine(); 
+                            }
+                            break;
+                        }
                     case 3:
-                        System.out.println("Finalizado el programa!\n");
+                        System.out.println("Finalizado el programa\n");
                         break;
                     default:
                         System.out.println("Opción no válida. Inténtelo de nuevo.\n");
                 }
             } catch (Exception e) {
-                System.out.println("Error: Entrada no válida. Por favor, ingrese un número.\n");
+                System.out.println("Error: Entrada no valida. Por favor, ingrese un numero.\n");
                 sc.nextLine(); 
             }
         } while (opcion != 3);
