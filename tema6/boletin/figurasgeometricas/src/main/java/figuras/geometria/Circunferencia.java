@@ -25,50 +25,45 @@
  */
 package figuras.geometria;
 
-import figuras.interfaz.InterfazUsuario;
 import figuras.interfaz.Libreria;
 
-public class Figura implements InterfazUsuario{
-    protected Punto origen;
-    protected String nombre;
+public class Circunferencia extends Figura{
+    private double radio;
 
-    public Figura(Punto origen, String nombre) {
-        this.origen = origen;
-        setNombre(nombre);
+
+    public Circunferencia(Punto origen, double radio){
+        super(origen, "CIRCUNFERENCIA");
+        setRadio(radio);
     }
 
-    public Figura(){
-        this(new Punto(), "");
+    public Circunferencia(){
+        this(new Punto(), 1);
 
     }
 
-    public void setNombre(String nombre){
-        this.nombre=nombre.trim().toUpperCase();
+    public void setRadio(double radio){
+        if(radio < 0){
+            throw new IllegalArgumentException("El radio no puede ser negativo.");
+        }
+        this.radio=radio;
     }
 
-    public String getNombre(){
-        return nombre;
-    }
-
-    public Punto getOrigen(){
-        return origen;
-    }
-
-    public void setOrigen(Punto origen){
-        this.origen=origen;
+    public double getRadio() {
+        return radio;
     }
 
     @Override
-    public void pedirDatos(){
-        System.out.println("Introduce el nombre de la bicicleta: ");
-        this.setNombre(Libreria.scanner.nextLine());
-        this.origen.pedirDatos();
+    public void pedirDatos() {
+        super.pedirDatos();
+        System.out.println("Introduce el radio:");
+        setRadio(Libreria.pedirReal());
     }
 
     @Override
-    public void mostrarDatos(){
-        System.out.println("Nombre: " + nombre);
-        System.out.println("Origen: " + origen);
+    public void mostrarDatos() {
+        super.mostrarDatos();
+        System.out.println("Radio: " + radio);
     }
-    
+
+
 }
