@@ -1,6 +1,6 @@
 package Arrays.Boletin1.exercise5;
 
-import java.util.*;
+import java.util.Calendar;
 
 public class Ventas {
     public int[] ventas = new int[12];
