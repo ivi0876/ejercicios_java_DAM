@@ -1,6 +1,6 @@
 package figuras.geometria;
 
-public class Linea {
+public class Linea extends Figura{
     private Punto puntoFinal;
 
     public Linea(Punto origen, Punto puntoFinal){
@@ -25,5 +25,10 @@ public class Linea {
         super.pedirDatos();
         System.out.println("Introduce el punto final:");
         this.puntoFinal.pedirDatos();
+    }
+    @Override
+    public void mostrarDatos() {
+        super.mostrarDatos();
+        System.out.println("Punto Final: " + puntoFinal);
     }
 }
