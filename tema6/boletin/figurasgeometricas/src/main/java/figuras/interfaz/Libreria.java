@@ -4,7 +4,7 @@ package figuras.interfaz;
 import java.util.Scanner;
 
 public class Libreria {
-    private static final Scanner scanner = new Scanner(System.in);
+    public static final Scanner scanner = new Scanner(System.in);
     
     public static int pedirEntero() {
         while (true) {
