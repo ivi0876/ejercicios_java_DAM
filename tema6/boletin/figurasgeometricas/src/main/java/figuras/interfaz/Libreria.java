@@ -1,4 +1,4 @@
-package figuras.geometria;
+package figuras.interfaz;
 
 
 import java.util.Scanner;

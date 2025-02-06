@@ -1,4 +1,4 @@
-package figuras.interfaz;
+package figuras.geometria;
 
 public class Linea {
     

@@ -1,4 +1,4 @@
-package figuras.geometria;
+package figuras.interfaz;
 
 public interface InterfazUsuario {
 
