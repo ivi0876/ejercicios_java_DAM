@@ -1,7 +1,6 @@
 package figuras.geometria;
-
-import interfaz.Libreria;
-import interfaz.InterfazUsuario;
+import figuras.interfaz.Libreria;
+import figuras.interfaz.InterfazUsuario;
 public class Punto {
     public double x, y;
     
