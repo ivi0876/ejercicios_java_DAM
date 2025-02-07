@@ -53,7 +53,7 @@ public class Cadena {
             String otra = (String) objeto;
             return this.toString().equals(otra);
         }
-
+        //recorre el array otra y se compara cada carácter del array con el carácter correspondiente en la lista cadena
         if (objeto instanceof char[]){
             char[] otra =(char[]) objeto;
             if(otra.length != cadena.size()){
@@ -63,9 +63,9 @@ public class Cadena {
                 if(otra[i] != cadena.get(i)) {
                     return false;
                 }
-                return true;
+                
             }
-            
+            return true; 
         }
         throw new IllegalArgumentException("Tipo no valido");
     }
