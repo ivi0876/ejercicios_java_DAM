@@ -17,7 +17,7 @@ public class Main {
 
         // Comparación con un array de caracteres
         char[] array = {'h', 'o', 'l', 'a', ' ', 'm', 'u', 'n', 'd', 'o'};
-        System.out.println("¿Es igual a un array de char? " + c.equals(array));
+        System.out.println("Es igual a un array de char? " + c.equals(array));
 
         // Prueba del método eliminar(char)
         System.out.println("Eliminando 'o'... Eliminados: " + c.eliminar('o'));
