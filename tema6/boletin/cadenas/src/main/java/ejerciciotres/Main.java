@@ -8,12 +8,12 @@ public class Main {
         System.out.println("Cadena: " + c.toString());
 
         // Comparación con un String
-        System.out.println("¿Es igual a 'hola mundo'? " + c.equals("hola mundo"));
+        System.out.println("Es igual a 'hola mundo'? " + c.equals("hola mundo"));
 
         // Comparacion con otro objeto Cadena
         Cadena otraCadena = new Cadena();
         otraCadena.setCadena("hola mundo");
-        System.out.println("¿Es igual a otro Cadena con 'hola mundo'? " + c.equals(otraCadena));
+        System.out.println("Es igual a otro Cadena con 'hola mundo'? " + c.equals(otraCadena));
 
         // Comparación con un array de caracteres
         char[] array = {'h', 'o', 'l', 'a', ' ', 'm', 'u', 'n', 'd', 'o'};
