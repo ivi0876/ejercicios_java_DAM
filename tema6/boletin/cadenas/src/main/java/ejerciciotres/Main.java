@@ -1,26 +1,39 @@
 package ejerciciotres;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class Main {
     public static void main(String[] args) {
-        // Crear un objeto Cadena y asignarle un valor
-        Cadena c = new Cadena();
-        c.setCadena("hola mundo");
-        System.out.println("Cadena: " + c.toString());
+        // Crear objetos Cadena
+        Cadena c1 = new Cadena();
+        c1.setCadena("hola mundo");
 
-        // Comparación con un String
-        System.out.println("Es igual a 'hola mundo'? " + c.equals("hola mundo"));
+        Cadena c2 = new Cadena();
+        c2.setCadena("adios");
 
-        // Comparacion con otro objeto Cadena
-        Cadena otraCadena = new Cadena();
-        otraCadena.setCadena("hola mundo");
-        System.out.println("Es igual a otro Cadena con 'hola mundo'? " + c.equals(otraCadena));
+        Cadena c3 = new Cadena();
+        c3.setCadena("bienvenido");
 
-        // Comparación con un array de caracteres
-        char[] array = {'h', 'o', 'l', 'a', ' ', 'm', 'u', 'n', 'd', 'o'};
-        System.out.println("Es igual a un array de char? " + c.equals(array));
- 
-        // Prueba del método eliminar(char)
-        System.out.println("Eliminando 'o'... Eliminados: " + c.eliminar('o'));
-        System.out.println("Cadena después de eliminar: " + c.toString());
+        // Lista de cadenas
+        ArrayList<Cadena> lista = new ArrayList<>();
+        lista.add(c1);
+        lista.add(c2);
+        lista.add(c3);
+
+        // Mostrar antes de ordenar
+        System.out.println("Antes de ordenar:");
+        for (Cadena c : lista) {
+            System.out.println(c);
+        }
+
+        // Ordenar lista
+        Collections.sort(lista);
+
+        // Mostrar después de ordenar
+        System.out.println("\nDespués de ordenar:");
+        for (Cadena c : lista) {
+            System.out.println(c);
+        }
     }
 }
